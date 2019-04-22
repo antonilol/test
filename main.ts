@@ -17,6 +17,12 @@ namespace logicextra {
             return (a || b);
         } else if (x==2) {
             return !(a && b);
+        } else if (x==3) {
+            return !(a || b);
+        } else if (x==4) {
+            return ((!(a) && !(b)) || (a && b));
+        } else if (x==5) {
+            return ((!(a) && b) || (a && !(b)));
         } else {
             return false;
         }
