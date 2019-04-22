@@ -1,11 +1,11 @@
 
 enum Bool {
-    and,
-    or,
-    nand,
-    nor,
-    xor,
-    xnor
+    and=0,
+    or=1,
+    nand=2,
+    nor=3,
+    xor=4,
+    xnor=5
 }
 //% color="#11bb11" block="Logic - Extra"
 namespace logicextra {
