@@ -7,8 +7,8 @@ enum Bool {
     xor=4,
     xnor=5
 }
-//% color="#11bb11" block="Logic - Extra"
-namespace logicextra {
+//% color="#11bb11" block="Extra Functions"
+namespace extra {
     //% block="$a $x $b"
     export function op(a: boolean, x: Bool, b: boolean) : boolean {
         if (x==0) {
@@ -25,6 +25,14 @@ namespace logicextra {
             return ((!(a) && b) || (a && !(b)));
         } else {
             return false;
+        }
+    }
+    //% block="plot led list $leds"
+    export function plotLedList(leds: boolean[]) : boolean {
+        for (let i = 0; i <= 24; i++) {
+            if (leds[i]) {
+                led.plot(i % 5, Math.floor(i / 5))
+            }
         }
     }
 }
