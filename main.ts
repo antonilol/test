@@ -10,7 +10,7 @@ enum Bool {
 //% color="#11bb11" block="Logic - Extra"
 namespace logicextra {
     //% block="$a $x $b"
-    export function bool(a: boolean, x: Bool, b: boolean) : boolean {
+    export function op(a: boolean, x: Bool, b: boolean) : boolean {
         if (x==0) {
             return (a && b);
         } else if (x==1) {
