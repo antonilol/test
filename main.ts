@@ -13,7 +13,12 @@ namespace logicextra {
 
     //% block="$a $x $b"
     export function bool(a: boolean, x: Bool, b: boolean): boolean {
-        return a;
+        if (x==and){
+            return 1;
+        }else{
+            return 0;
+        }
+        
     }
 
     
