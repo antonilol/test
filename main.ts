@@ -1,5 +1,5 @@
 
-//% color="#11ff11"
+//% color="#11bb11"
 namespace test {
 
     //% block="$a and $b "
