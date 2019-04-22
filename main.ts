@@ -5,7 +5,7 @@ namespace test2 {
     enum Logic {
         and = 1,
         or = 2,
-        //% blockId="ApB" block="A+B"
+        
         nor = 3,
     }
 
