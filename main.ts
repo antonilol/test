@@ -28,16 +28,14 @@ namespace extra {
         }
     }
     //% block="plot led list $leds"
-    export function plotLedList(leds: boolean[]) : boolean {
-        if (leds.lenght!=25){
-            return false;
-        } else {
-            for (let i = 0; i <= 24; i++) {
-                if (leds[i]) {
-                    led.plot(i % 5, Math.floor(i / 5))
-                }
+    export function plotLedList(leds: number[]) : void {
+        
+        for (let i = 0; i <= 24; i++) {
+            if (leds[i]==1) {
+                led.plot(i % 5, Math.floor(i / 5))
+                
             }
-            return true;
+           
         }
     }
 }
