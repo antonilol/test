@@ -49,5 +49,9 @@ namespace extra {
     export function seg7(num:number) : void{
         led.plot(1,1);
     }
+    //% block="$value"
+    export function numb(value:number):number{
+        return value;
+    }
 }
 
