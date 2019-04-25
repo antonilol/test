@@ -49,7 +49,7 @@ namespace extra {
     export function seg7(num:number) : void{
         led.plot(1,1);
     }
-    /*
+    /**
      * Stackable block to create extremely large blocks
      */
     //% block="$value"
