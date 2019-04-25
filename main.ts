@@ -50,7 +50,7 @@ namespace extra {
     /**
      * Plot or unplot a 7-segment 1-digit number.
      */
-    //% block="$mode 7-seg number $num with offset $offset"
+    //% block="$mode 7-seg number $value with offset $offset"
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
     export function seg7(mode:PlotUnplot,value:number,offset:number) : void{
         if (mode) {
