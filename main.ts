@@ -50,6 +50,7 @@ namespace extra {
         led.plot(1,1);
     }
     //% block="$value"
+    //% help="Stackable block to create extremely large blocks"
     export function numb(value:number):number{
         return value;
     }
