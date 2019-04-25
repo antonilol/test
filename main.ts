@@ -7,6 +7,10 @@ enum Bool {
     xor=4,
     xnor=5
 }
+enum PlotUnplot {
+    plot=0,
+    unplot=1
+}
 //% color="#11bb11" block="Extra Functions"
 namespace extra {
     //% block="$a $x $b"
@@ -43,14 +47,22 @@ namespace extra {
         
         return [e0,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24];
     }
-    
-    //% block="show 7-seg number $num"
-    //% num.min=0 num.max=9
-    export function seg7(num:number) : void{
-        led.plot(1,1);
+    /**
+     * Plot or unplot a 7-segment 1-digit number.
+     */
+    //% block="$mode 7-seg number $num with offset $offset"
+    //% num.min=0 num.max=9 offset.min=0 offset.max=2
+    export function seg7(mode:PlotUnplot,num:number,offset:number) : void{
+        if (mode) {
+            //unplot
+            
+        } else {
+            //plot
+            
+        }
     }
     /**
-     * Stackable block to create extremely large blocks
+     * Stackable block to create extremely large blocks.
      */
     //% block="$value"
     export function numb(value:number):number{
