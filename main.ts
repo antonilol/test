@@ -56,7 +56,7 @@ namespace extra {
         let list: number[][] = [[[1,1,1],[1,0,1],[1,0,1],[1,0,1],[1,1,1]],[[0,0,1],[0,0,1],[0,0,1],[0,0,1],[0,0,1]],[[1,1,1],[0,0,1],[1,1,1],[1,0,0],[1,1,1]]][value];
         for (let y = 0; y <= 4; y++) {
 	        for (let x = 0; x <= 2; x++) {
-                if (list[y][x+offset]) {
+                if (list[y][x]) {
 		            if (mode) {
                     //unplot
 	                led.unplot(x+offset,y)
