@@ -51,7 +51,7 @@ namespace extra {
      * Plot or unplot a 7-segment 1-digit number.
      */
     //% block="$mode 7-seg number $value with offset $offset"
-    //% value.min=0 value.max=8 offset.min=0 offset.max=2
+    //% value.min=0 value.max=9 offset.min=0 offset.max=2
     export function seg7(mode:PlotUnplot,value:number,offset:number) : void{
         let list: number[][] = [[[1,1,1],[1,0,1],[1,0,1],[1,0,1],[1,1,1]],
                                 [[0,0,1],[0,0,1],[0,0,1],[0,0,1],[0,0,1]],
