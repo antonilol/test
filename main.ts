@@ -55,18 +55,18 @@ namespace extra {
     export function seg7(mode:PlotUnplot,value:number,offset:number) : void{
         let list: number[][] = [[[1,1,1],[1,0,1],[1,0,1],[1,0,1],[1,1,1]],[[0,0,1],[0,0,1],[0,0,1],[0,0,1],[0,0,1]],[[1,1,1],[0,0,1],[1,1,1],[1,0,0],[1,1,1]],[[1,1,1],[0,0,1],[1,1,1],[0,0,1],[1,1,1]],[[1,0,1],[1,0,1],[1,1,1],[0,0,1],[0,0,1]]][value];
         for (let y = 0; y <= 4; y++) {
-	        for (let x = 0; x <= 2; x++) {
+            for (let x = 0; x <= 2; x++) {
                 if (list[y][x]) {
-		            if (mode) {
+                    if (mode) {
                     //unplot
-	                    led.unplot(x+offset,y)
+                        led.unplot(x+offset,y)
             
                     } else {
                     //plot
                         led.plot(x+offset,y)
                     }
-	        	}
-	        }
+                }
+            }
         }
     }
     /**
@@ -77,4 +77,3 @@ namespace extra {
         return value;
     }
 }
-
