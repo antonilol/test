@@ -33,13 +33,12 @@ namespace extra {
     }
     //% block="plot led list $leds"
     export function plotLedList(leds: number[]) : void {
-        
-        for (let i = 0; i <= 24; i++) {
-            if (leds[i]==1) {
-                led.plot(i % 5, Math.floor(i / 5));
-                
+        if (leds.length==25) {
+            for (let i = 0; i <= 24; i++) {
+                if (leds[i]==1) {
+                    led.plot(i % 5, Math.floor(i / 5));
+                }
             }
-           
         }
     }
     //% block="list of 25x $e"
