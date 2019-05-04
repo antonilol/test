@@ -31,8 +31,20 @@ namespace extra {
             return false;
         }
     }
+    
+    //% block="list of 25 numbers $e"
+    export function array25(e: number = 1) : number[] {
+        let list: number[] = [];
+        for (let i = 0; i <= 24; i++) {
+            list.push(e);
+        }
+        return list;
+    }
+    /**
+     * Plots the given led list to the leds. Works only when list has 25 elements.
+     */
     //% block="plot led list $leds"
-    export function plotLedList(leds: number[]) : void {
+    export function plotLedList(leds: number[] = array25(1)) : void {
         if (leds.length==25) {
             for (let i = 0; i <= 24; i++) {
                 if (leds[i]==1) {
@@ -40,14 +52,6 @@ namespace extra {
                 }
             }
         }
-    }
-    //% block="list of 25x $e"
-    export function array25(e: number) : number[] {
-        let list: number[] = [];
-        for (let i = 0; i <= 24; i++) {
-            list.push(e);
-        }
-        return list;
     }
     /**
      * Plot or unplot a 7-segment 1-digit number.
