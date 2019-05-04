@@ -48,12 +48,12 @@ namespace extra {
         for (let i = 0; i <= 24; i++) {
             list.push(e);
         }
-        return e;
+        return list;
     }
     /**
      * Plot or unplot a 7-segment 1-digit number.
      */
-    //% block="$mode 7-seg number $value with offset $offset"
+    //% block="$mode 7-seg number $value offset $offset"
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
     export function seg7(mode:Mode,value:number,offset:number) : void{
         let list: number[][] = [[[1,1,1],[1,0,1],[1,0,1],[1,0,1],[1,1,1]],
