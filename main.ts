@@ -44,10 +44,11 @@ namespace extra {
     }
     //% block="list of 25x $e"
     export function array25(e: number) : number[] {
+        let list: number[] = [];
         for (let i = 0; i <= 24; i++) {
-            
+            list.push(e);
         }
-        return [0];
+        return e;
     }
     /**
      * Plot or unplot a 7-segment 1-digit number.
