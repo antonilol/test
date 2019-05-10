@@ -115,7 +115,7 @@ namespace extra {
                 led.plot(0,y);
             }
             seg7(mode,value,2);
-    
+        }}
     
     /**
      * Stackable block to create extremely large blocks.
