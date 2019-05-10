@@ -104,7 +104,7 @@ namespace extra {
     //% value.min=10 value.max=19
     //% group="Functions"
 
-    export function seg72(mode:Mode,value:number):void {
+    export function seg72(mode:Mode,value:number=10):void {
         for (let y = 0; y <= 4; y++) {
         if (mode) {
             //unplot
@@ -114,7 +114,7 @@ namespace extra {
             //plot
                 led.plot(0,y);
             }
-            seg7(mode,value,2);
+            seg7(mode,value-10,2);
         }}
     
     /**
