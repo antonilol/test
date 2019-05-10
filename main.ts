@@ -67,7 +67,7 @@ namespace extra {
     /**
      * Plot or unplot a 7-segment 1-digit number.
      */
-    //% block="$mode 7-seg number $value offset $offset"
+    //% block="$mode 7-seg 1-digit number $value offset $offset"
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
     //% group="Functions"
 
@@ -87,16 +87,36 @@ namespace extra {
                 if (list[y][x]) {
                     if (mode) {
                     //unplot
-                        led.unplot(x+offset,y)
+                        led.unplot(x+offset,y);
             
                     } else {
                     //plot
-                        led.plot(x+offset,y)
+                        led.plot(x+offset,y);
                     }
                 }
             }
         }
     }
+    /**
+     * Plot or unplot a 7-segment 2-digit number.
+     */
+    //% block="$mode 7-seg 2-digit number $value"
+    //% value.min=10 value.max=19
+    //% group="Functions"
+
+    export function seg72(mode:Mode,value:number):void {
+        for (let y = 0; y <= 4; y++) {
+        if (mode) {
+            //unplot
+                led.unplot(0,y);
+            
+            } else {
+            //plot
+                led.plot(0,y);
+            }
+            seg7(mode,value,2);
+    
+    
     /**
      * Stackable block to create extremely large blocks.
      */
