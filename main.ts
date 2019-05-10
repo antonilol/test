@@ -13,7 +13,7 @@ enum Mode {
 //% color="#11bb11" block="Extra Functions"
 //% groups="['Functions', 'FUNctions']"
 namespace extra {
-    //% block="on event"
+    //% block="on change $handler"
     export function onEvent(handler: () => void) {
         
     }
@@ -55,7 +55,7 @@ namespace extra {
     //% block="plot led list $leds"
     //% group="Functions"
 
-    export function plotLedList(leds: number[] = array25(1)) : void {
+    export function plotLedList(leds?: number[] = array25(1)) : void {
         if (leds.length==25) {
             for (let i = 0; i <= 24; i++) {
                 if (leds[i]==1) {
