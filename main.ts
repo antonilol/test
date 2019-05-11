@@ -1,18 +1,21 @@
-enum Bool {
-    and=0,
-    or=1,
-    nand=2,
-    nor=3,
-    xor=4,
-    xnor=5
-}
-enum Mode {
-    plot=0,
-    unplot=1
-}
+
 //% color="#11bb11" block="Extra Functions"
 //% groups="['Functions', 'FUNctions']"
 namespace extra {
+    
+    export enum Bool {
+        and=0,
+        or=1,
+        nand=2,
+        nor=3,
+        xor=4,
+        xnor=5
+    }
+    export enum Mode {
+        plot=0,
+        unplot=1
+    }
+    
     //% block="on event"
     export function onEvent(handler: () => void) {
         
