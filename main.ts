@@ -44,7 +44,6 @@ namespace extra {
     }
     /**
      * lol
-     *
      * @param number 0 or 1, eg: 1
      */
     //% block="list of 25 numbers $e"
