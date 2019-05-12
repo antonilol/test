@@ -42,11 +42,15 @@ namespace extra {
             return false;
         }
     }
-    
+    /**
+     * lol
+     *
+     * @param number 0 or 1, eg: 1
+     */
     //% block="list of 25 numbers $e"
     //% group="Returns list of numbers"
 
-    export function array25(e: number = 1) : number[] {
+    export function array25(e: number) : number[] {
         let list: number[] = [];
         for (let i = 0; i <= 24; i++) {
             list.push(e);
