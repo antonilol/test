@@ -1,6 +1,6 @@
 
 //% color="#11bb11" block="Extra Functions"
-//% groups="['Functions', 'FUNctions']"
+//% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events']"
 namespace extra {
     
     export enum Bool {
@@ -17,12 +17,13 @@ namespace extra {
     }
     
     //% block="on event"
+    //% group="Events"
     export function onEvent(handler: () => void) {
         
     }
     
     //% block="$a $x $b"
-    //% group="Functions"
+    //% group="Returns boolean"
 
     export function op(a: boolean, x: Bool, b: boolean) : boolean {
         if (x==0) {
@@ -43,7 +44,7 @@ namespace extra {
     }
     
     //% block="list of 25 numbers $e"
-    //% group="Functions"
+    //% group="Returns list of numbers"
 
     export function array25(e: number = 1) : number[] {
         let list: number[] = [];
@@ -56,7 +57,7 @@ namespace extra {
      * Plots the given led list to the leds. Works only when list has 25 elements.
      */
     //% block="plot led list $leds"
-    //% group="Functions"
+    //% group="Default blocks"
 
     export function plotLedList(leds: number[] = array25(1)) : void {
         if (leds.length==25) {
@@ -72,7 +73,7 @@ namespace extra {
      */
     //% block="$mode 7-seg 1-digit number $value offset $offset"
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
-    //% group="Functions"
+    //% group="Default blocks"
 
     export function seg7(mode:Mode,value:number,offset:number) : void{
         let list: number[][] = [[[1,1,1],[1,0,1],[1,0,1],[1,0,1],[1,1,1]],
@@ -105,7 +106,7 @@ namespace extra {
      */
     //% block="$mode 7-seg 2-digit number $value"
     //% value.min=10 value.max=19
-    //% group="Functions"
+    //% group="Default blocks"
 
     export function seg72(mode:Mode,value:number=10):void {
         for (let y = 0; y <= 4; y++) {
@@ -124,7 +125,7 @@ namespace extra {
      * Stackable block to create extremely large blocks.
      */
     //% block="$value"
-    //% group="FUNctions"
+    //% group="Returns number"
 
     export function numb(value:number):number{
         return value;
