@@ -16,14 +16,16 @@ namespace extra {
         unplot=1
     }
     
-    //% block="on event $v"
+    //% block="Every $ms ms"
     //% group="Events"
-    export function onEvent(v: number,handler: () => void) {
+    export function onEvent(ms:number,handler: (run: number) => void) {
+        let run : number = 0
         while (true){
-        if (v>1){
-            handler();
-            break}
-    }}
+            basic.pause(ms);
+            handler(run);
+            run = run + 1;
+        }
+    }
     
     //% block="$a $x $b"
     //% group="Returns boolean"
