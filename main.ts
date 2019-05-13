@@ -22,7 +22,9 @@ namespace extra {
         if (ms>0){
             let indexNum : number = 1
             while (true){
-                basic.pause(ms);
+                if (!(startDirectly && indexNum==1)){
+                    basic.pause(ms);
+                }
                 handler(indexNum);
                 indexNum = indexNum + 1;
             }
