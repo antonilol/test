@@ -16,14 +16,16 @@ namespace extra {
         unplot=1
     }
     
-    //% block="Every $ms ms"
+    //% block="Every $ms ms, start directly $startDirectly, $indexNum = index number"
     //% group="Events"
-    export function onEvent(ms:number,handler: (run: number) => void) {
-        let run : number = 0
-        while (true){
-            basic.pause(ms);
-            handler(run);
-            run = run + 1;
+    export function onEvent(ms:number=1,startDirectly:boolean,handler: (indexNum: number) => void) {
+        if (ms>0){
+            let run : number = 1
+            while (true){
+                basic.pause(ms);
+                handler(indexNum);
+                indexNum = indexNum + 1;
+            }
         }
     }
     
