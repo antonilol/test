@@ -16,10 +16,11 @@ namespace extra {
         unplot=1
     }
     
-    //% block="on event"
+    //% block="on event $v"
     //% group="Events"
-    export function onEvent(handler: () => void) {
-        
+    export function onEvent(v: number,handler: () => void) {
+        if (v==1){
+            return}
     }
     
     //% block="$a $x $b"
