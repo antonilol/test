@@ -18,9 +18,9 @@ namespace extra {
     
     //% block="on event $v"
     //% group="Events"
-    export function onEvent(v: number,handler: (number: string) => void) {
+    export function onEvent(v: number,handler: () => void) {
         if (v>1){
-            handler(number)}
+            handler()}
     }
     
     //% block="$a $x $b"
