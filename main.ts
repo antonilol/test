@@ -1,6 +1,6 @@
 
 //% color="#11bb11" block="Extra Functions"
-//% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events']"
+//% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Tests']"
 namespace extra {
     
     export enum Bool {
@@ -33,6 +33,13 @@ namespace extra {
             }
         }
     }
+    
+    //% block="MULTI"
+    //% group="Tests"
+    export function multi(handler: () => void,handler2: () => void) : void {
+        
+    }
+    
     
     //% block="$a $x $b"
     //% group="Returns boolean"
