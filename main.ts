@@ -20,7 +20,7 @@ namespace extra {
     //% group="Events"
     export function onEvent(ms:number=1,startDirectly:boolean,handler: (indexNum: number) => void) {
         if (ms>0){
-            let run : number = 1
+            let indexNum : number = 1
             while (true){
                 basic.pause(ms);
                 handler(indexNum);
