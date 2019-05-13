@@ -34,11 +34,7 @@ namespace extra {
         }
     }
     
-    //% block="MULTI"
-    //% group="Tests"
-    export function multi(handler: () => void,handler2: () => void) : void {
-        
-    }
+    
     
     
     //% block="$a $x $b"
