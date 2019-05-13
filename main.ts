@@ -16,7 +16,7 @@ namespace extra {
         unplot=1
     }
     
-    //% block="Every $ms ms, start directly $startDirectly, $indexNum = index number"
+    //% block="Every $ms ms, start directly $startDirectly, "
     //% group="Events"
     export function onEvent(ms:number=1,startDirectly:boolean,handler: (indexNum: number) => void) {
         if (ms>0){
