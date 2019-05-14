@@ -1,6 +1,6 @@
 
 //% color="#11bb11" block="Extra Functions"
-//% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Tests']"
+//% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
 namespace extra {
     
     export enum Bool {
@@ -39,16 +39,17 @@ namespace extra {
                                function(x:number){},function(x:number){},function(x:number){},function(x:number){},function(x:number){}];
     
     
-
-    //% block="Write function to $slot"
-    //% group="Tests"
+    //% slot.min=0 slot.max=9
+    //% block="Write function to slot $slot"
+    //% group="Extra"
     export function defFunction(slot:number,handler: (arg:number) => void) {
         let arg:number;
         funcs[slot]=handler;
         
     }
-    //% block="Read and call func from slot $slot with arg: $arg"
-    //% group="Tests"
+    //% slot.min=0 slot.max=9
+    //% block="Read and call function from slot $slot with arg: $arg"
+    //% group="Extra"
     export function callFunction(slot:number,arg:number) {
         funcs[slot](arg);
         
