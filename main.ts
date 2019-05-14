@@ -36,7 +36,7 @@ namespace extra {
     
     //% block="Define function"
     //% group="Tests"
-    export function defFunction(handler: (arg1, ...args) => void) {
+    export function defFunction(handler: (arg1:any, ...args:any[]) => void) {
         let arg1;
         let args;
         
