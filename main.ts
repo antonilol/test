@@ -35,8 +35,8 @@ namespace extra {
     }
     
     
-    let funcs: (() => void)[]=[function(){},function(){},function(){},function(){},function(){},
-                               function(){},function(){},function(){},function(){},function(){}];
+    let funcs: ((x:number) => void)[]=[function(x:number){},function(x:number){},function(x:number){},function(x:number){},function(x:number){},
+                               function(x:number){},function(x:number){},function(x:number){},function(x:number){},function(x:number){}];
     
     
 
