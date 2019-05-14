@@ -18,27 +18,39 @@ namespace extra {
     
     //% block="Every $ms ms, start directly $startDirectly, "
     //% group="Events"
-    export function onEvent(ms:number,startDirectly:boolean,handler: (indexNum: number, runningTime: number) => void) {
+    export function onEvent(ms:number,startDirectly:boolean,handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum : number = 1;
-        let runningTime : number = 0;
+        let totalWaitingTime : number = 0;
         if (ms>0){
             
             while (true){
                 if (!(startDirectly && indexNum==1)){
                     basic.pause(ms);
-                    runningTime = runningTime + ms
+                    totalWaitingTime = totalWaitingTime + ms
                 }
-                handler(indexNum, runningTime);
+                handler(indexNum, totalWaitingTime);
                 indexNum = indexNum + 1;
             }
         }
     }
     
-    //% block="Define function number args"
+    
+    let funcs: (() => void)[]=[function(){},function(){},function(){},function(){},function(){},
+                               function(){},function(){},function(){},function(){},function(){}];
+    
+    
+
+    //% block="Define function $slot"
     //% group="Tests"
-    export function defFunction(handler: (arg1:number, ...args:number[]) => void) {
-        let arg1:number;
-        let args:number[];
+    export function defFunction(slot:number,handler: (arg:number) => void) {
+        let arg:number;
+        funcs.push(handler);
+        
+    }
+    //% block="call func $slot"
+    //% group="Tests"
+    export function callFunction(slot:number,arg:number) {
+        funcs[slot](arg);
         
     }
     
