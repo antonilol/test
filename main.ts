@@ -35,23 +35,22 @@ namespace extra {
     }
     
     
-    let funcs: ((x:number) => void)[]=[function(x:number){},function(x:number){},function(x:number){},function(x:number){},function(x:number){},
-                               function(x:number){},function(x:number){},function(x:number){},function(x:number){},function(x:number){}];
+    let func: ((x:number) => void)=function(x:number){};
     
     
-    //% slot.min=0 slot.max=9
-    //% block="Write function to slot $slot"
+    
+    //% block="Define function with number arg"
     //% group="Extra"
-    export function defFunction(slot:number,handler: (arg:number) => void) {
+    export function defFunction(handler: (arg:number) => void) {
         let arg:number;
-        funcs[slot]=handler;
+        func=handler;
         
     }
-    //% slot.min=0 slot.max=9
-    //% block="Read and call function from slot $slot with arg: $arg"
+  
+    //% block="Call function with number arg $arg"
     //% group="Extra"
-    export function callFunction(slot:number,arg:number) {
-        funcs[slot](arg);
+    export function callFunction(arg:number) {
+        func(arg);
         
     }
     
