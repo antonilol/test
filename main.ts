@@ -47,7 +47,7 @@ namespace extra {
         funcs.push(handler);
         
     }
-    //% block="call func $slot"
+    //% block="call func $slot arg: $arg"
     //% group="Tests"
     export function callFunction(slot:number,arg:number) {
         funcs[slot](arg);
