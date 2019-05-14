@@ -18,9 +18,9 @@ namespace extra {
     
     //% block="Every $ms ms, start directly $startDirectly, "
     //% group="Events"
-    export function onEvent(ms=100,startDirectly:boolean,handler: (indexNum: number, runningTime: number) => void) {
-        let indexNum : number = 1
-        let runningTime : number = 0
+    export function onEvent(ms:number,startDirectly:boolean,handler: (indexNum: number, runningTime: number) => void) {
+        let indexNum : number = 1;
+        let runningTime : number = 0;
         if (ms>0){
             
             while (true){
@@ -36,20 +36,10 @@ namespace extra {
     
     //% block="Define function"
     //% group="Tests"
-    export function defFunction(handler: (arg1: any, arg2: any) => void) {
-        let indexNum : number = 1
-        let runningTime : number = 0
-        if (ms>0){
-           
-            while (true){
-                if (!(startDirectly && indexNum==1)){
-                    basic.pause(ms);
-                    runningTime = runningTime + ms
-                }
-                handler(indexNum, runningTime);
-                indexNum = indexNum + 1;
-            }
-        }
+    export function defFunction(handler: (arg1:any, ...args: any[]) => void) {
+        let arg : any;
+        let args : any[];
+        
     }
     
     
