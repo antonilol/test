@@ -40,14 +40,14 @@ namespace extra {
     
     
 
-    //% block="Define function $slot"
+    //% block="Write function to $slot"
     //% group="Tests"
     export function defFunction(slot:number,handler: (arg:number) => void) {
         let arg:number;
         funcs[slot]=handler;
         
     }
-    //% block="call func $slot arg: $arg"
+    //% block="Read and call func from slot $slot with arg: $arg"
     //% group="Tests"
     export function callFunction(slot:number,arg:number) {
         funcs[slot](arg);
