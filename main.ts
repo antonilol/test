@@ -44,7 +44,7 @@ namespace extra {
     //% group="Tests"
     export function defFunction(slot:number,handler: (arg:number) => void) {
         let arg:number;
-        funcs.push(handler);
+        funcs[slot]=handler;
         
     }
     //% block="call func $slot arg: $arg"
