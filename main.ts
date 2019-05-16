@@ -21,17 +21,17 @@ namespace extra {
         //% block="1"
         s1=1,
         //% block="2"
-        s0=0,
+        s0=2,
         //% block="3"
-        s1=1,
+        s1=3,
         //% block="4"
-        s0=0,
-        //% block="1"
-        s1=1,
-        //% block="0"
-        s0=0,
-        //% block="1"
-        s1=1,
+        s0=4,
+        //% block="5"
+        s1=5,
+        //% block="6"
+        s0=6,
+        //% block="7"
+        s1=7,
     }
     
     //% block="Every $ms ms, start directly $startDirectly, "
@@ -51,12 +51,11 @@ namespace extra {
             }
         }
     }
-    type DictionaryItem = [string, Customer];
-    let funcs: DictionaryItem[];
-    funcs = [];
     
     
-    let func: ((x:number) => void)=function(x:number){};
+    
+    let func: ((x:number) => void)[]=[function(x:number){}];
+    
     
     
     
@@ -64,7 +63,7 @@ namespace extra {
     //% group="Extra"
     export function defFunction(name:string,slot:Slot,handler: (arg:number) => void) {
         let arg:number;
-        funcs[name] = new Customer(handler);
+        
         func=handler;
         
     }
@@ -72,10 +71,8 @@ namespace extra {
     //% block="Call function with number arg $arg"
     //% group="Extra"
     export function callFunction(name:string,arg:number) {
-        let exe: Customer;
-        exe = funcs[name];
-        exe(arg);
-        //func(arg);
+        
+        func(arg);
         
     }
     
