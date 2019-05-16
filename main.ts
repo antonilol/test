@@ -47,7 +47,7 @@ namespace extra {
     
     //% block="Define function with number arg"
     //% group="Extra"
-    export function defFunction(handler: (arg:number) => void) {
+    export function defFunction(slot:Slot,handler: (arg:number) => void) {
         let arg:number;
         func=handler;
         
