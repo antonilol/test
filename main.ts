@@ -55,24 +55,27 @@ namespace extra {
     
     
     let func: ((x:number) => void)[]=[function(x:number){}];
-    
+    for (let _i = 0; _i <= 6; _i++) {
+         list.push(function(x:number){})
+    }
+
     
     
     
     //% block="Define function with number arg $slot"
     //% group="Extra"
-    export function defFunction(name:string,slot:Slot,handler: (arg:number) => void) {
+    export function defFunction(slot:Slot,handler: (arg:number) => void) {
         let arg:number;
         
-        func=handler;
+        func[slot]=handler;
         
     }
   
-    //% block="Call function with number arg $arg"
+    //% block="Call function with number arg $slot $arg"
     //% group="Extra"
-    export function callFunction(name:string,arg:number) {
+    export function callFunction(slot:Slot,arg:number) {
         
-        func(arg);
+        func[slot](arg);
         
     }
     
