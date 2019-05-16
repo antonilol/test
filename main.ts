@@ -61,7 +61,8 @@ namespace extra {
 
     
     
-    
+    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=4
+    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="250"
     //% block="Define function with number arg $slot"
     //% group="Extra"
     export function defFunction(slot:Slot,handler: (arg:number) => void) {
