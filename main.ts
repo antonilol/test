@@ -21,17 +21,17 @@ namespace extra {
         //% block="1"
         s1=1,
         //% block="2"
-        s0=2,
+        s2=2,
         //% block="3"
-        s1=3,
+        s3=3,
         //% block="4"
-        s0=4,
+        s4=4,
         //% block="5"
-        s1=5,
+        s5=5,
         //% block="6"
-        s0=6,
+        s6=6,
         //% block="7"
-        s1=7,
+        s7=7,
     }
     
     //% block="Every $ms ms, start directly $startDirectly, "
