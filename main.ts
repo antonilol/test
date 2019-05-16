@@ -16,10 +16,22 @@ namespace extra {
         unplot=1
     }
     export enum Slot {
-        //% block="slot 0"
+        //% block="0"
         s0=0,
-        //% block="slot 1"
-        s1=1
+        //% block="1"
+        s1=1,
+        //% block="2"
+        s0=0,
+        //% block="3"
+        s1=1,
+        //% block="4"
+        s0=0,
+        //% block="1"
+        s1=1,
+        //% block="0"
+        s0=0,
+        //% block="1"
+        s1=1,
     }
     
     //% block="Every $ms ms, start directly $startDirectly, "
@@ -39,6 +51,9 @@ namespace extra {
             }
         }
     }
+    type DictionaryItem = [string, Customer];
+    let funcs: DictionaryItem[];
+    funcs = [];
     
     
     let func: ((x:number) => void)=function(x:number){};
@@ -47,16 +62,20 @@ namespace extra {
     
     //% block="Define function with number arg $slot"
     //% group="Extra"
-    export function defFunction(slot:Slot,handler: (arg:number) => void) {
+    export function defFunction(name:string,slot:Slot,handler: (arg:number) => void) {
         let arg:number;
+        funcs[name] = new Customer(handler);
         func=handler;
         
     }
   
     //% block="Call function with number arg $arg"
     //% group="Extra"
-    export function callFunction(arg:number) {
-        func(arg);
+    export function callFunction(name:string,arg:number) {
+        let exe: Customer;
+        exe = funcs[name];
+        exe(arg);
+        //func(arg);
         
     }
     
