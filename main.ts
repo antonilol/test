@@ -56,7 +56,7 @@ namespace extra {
     
     let func: ((x:number) => void)[]=[function(x:number){}];
     for (let _i = 0; _i <= 6; _i++) {
-         list.push(function(x:number){})
+         func.push(function(x:number){})
     }
 
     
