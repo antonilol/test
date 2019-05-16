@@ -15,6 +15,12 @@ namespace extra {
         plot=0,
         unplot=1
     }
+    export enum Slot {
+        //% block="slot 0"
+        s0=0,
+        //% block="slot 1"
+        s1=1
+    }
     
     //% block="Every $ms ms, start directly $startDirectly, "
     //% group="Events"
