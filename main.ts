@@ -32,6 +32,8 @@ namespace extra {
         s6=6,
         //% block="7"
         s7=7,
+        //% block="8"
+        s8=8,
     }
     
     //% block="Every $ms ms, start directly $startDirectly, "
@@ -61,7 +63,7 @@ namespace extra {
 
     
     
-    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=4
+    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=3
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="250"
     //% block="Define function with number arg $slot"
     //% group="Extra"
@@ -71,7 +73,8 @@ namespace extra {
         func[slot]=handler;
         
     }
-  
+    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=3
+    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="250"
     //% block="Call function with number arg $slot $arg"
     //% group="Extra"
     export function callFunction(slot:Slot,arg:number) {
