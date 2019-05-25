@@ -81,9 +81,22 @@ namespace extra {
     }
     
     
+    //% block="plot binary $numb offset $offset reversed $reversed"
+    //% group="Returns boolean"
+    export function binView(numb:number,offset:number,reversed:boolean) : void {
+        for (let index = 0; index <= 24; index++) {
+            if (numb >= 2 ** (24 - index)) {
+                numb += -1 * 2 ** (24 - index)
+                if (reversed) {
+                    led.plot((offset+index) % 5, Math.floor((offset+index ) / 5))
+                } else {
+                    led.plot((offset+24-index) % 5, Math.floor((offset+24-index ) / 5))
+                }
+            }
+        }
+    }
     //% block="$a $x $b"
     //% group="Returns boolean"
-
     export function op(a: boolean, x: Bool, b: boolean) : boolean {
         if (x==0) {
             return (a && b);
