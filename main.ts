@@ -229,20 +229,7 @@ namespace extra {
             return false;
         }
     }
-    /*
-    //% block="string of 25 numbers $e" blockId=str25
-    //% group="Returns string"
-    /**
-     * Returns an string with 25 numbers
-     * @param e eg:1
-     *
-    export function str25(e: number) : string {
-        let str: string = '';
-        for (let i = 0; i <= 24; i++) {
-            str=str+e;
-        }
-        return str;
-    }*/
+    
     
     
     /**
@@ -266,8 +253,7 @@ namespace extra {
     
     /**
      * Convert the image to a string of 0 (off) and 1 (on)
-     * @param img eg:images.createImage(`
-    . . . . .
+     * @param img eg:images.createImage(`\n . . . . .
     . # . # .
     . . . . .
     # . . . #
