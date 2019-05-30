@@ -232,7 +232,10 @@ namespace extra {
    
     //% block="list of 25 numbers $e" blockId=array25
     //% group="Returns list of numbers"
-
+    /**
+     * Returns an array with 25 elements
+     * @param e eg:1
+     */
     export function array25(e: number) : number[] {
         let list: number[] = [];
         for (let i = 0; i <= 24; i++) {
@@ -242,7 +245,7 @@ namespace extra {
     }
     /**
      * Plots the given led list to the leds. Works only when list has 25 elements.
-     * @param leds eg:array25(1)
+     * @param leds eg:extra.array25(1)
      */
     //% block="plot led list $leds" blockId=plotLedList
     //% group="Default blocks"
