@@ -266,7 +266,7 @@ namespace extra {
     
     /**
      * Convert the image to a string of 0 (off) and 1 (on)
-     * @param leds eg:images.createImage(`
+     * @param img eg:images.createImage(`
     . . . . .
     . # . # .
     . . . . .
