@@ -257,7 +257,7 @@ namespace extra {
      */
     //% block="to string $img" blockId=imgToStr
     //% group="Returns string"
-
+    //% parts="ledmatrix"
     export function imgToStr(img: Image) : string {
         let output='';
         let temp = 0;
