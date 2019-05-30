@@ -243,21 +243,23 @@ namespace extra {
         }
         return str;
     }*/
+    
+    
     /**
-     * Plots the given led list to the leds. Works only when list has 25 elements.
+     * Plots the given led string to the leds. Works only when list has 25 elements.
      * @param leds eg:"00000 01010 00000 10001 01110"
      */
-    //% block="plot led list $leds" blockId=plotLedList
+    //% block="plot led string $leds" blockId=plotLedStr
     //% group="Default blocks"
 
-    export function plotLedList(leds: string) : void {/*
-        if (leds.length==25) {
-            for (let i = 0; i <= 24; i++) {
-                if (leds[i]==1) {
-                    led.plot(i % 5, Math.floor(i / 5));
-                }
+    export function plotLedStr(leds: string) : void {
+        let indexNum = 0;
+        for (let char of leds) {
+            if (char=='0' || char=='1') {
+                leds.plot(Math.idiv(indexNum,5),indexNum%5));
+                indexNum++;
             }
-        }*/
+        }
     }
     /**
      * Plot or unplot a 7-segment 1-digit number.
