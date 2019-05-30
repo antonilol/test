@@ -301,8 +301,8 @@ namespace extra {
 
     
     
-    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
-    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="300"
+    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=16
+    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="400"
     //% block="define function with number arg $slot" blockId=defFunction
     //% group="Extra"
     export function defFunction(slot:Slot,handler: (arg:number) => void) {
@@ -311,8 +311,8 @@ namespace extra {
         func[slot]=handler;
         
     }
-    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
-    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="300"
+    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=16
+    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="400"
     //% block="call function with number arg $slot $arg" blockId=callFunction
     //% group="Extra"
     export function callFunction(slot:Slot,arg:number) {
