@@ -253,7 +253,7 @@ namespace extra {
     
     /**
      * Convert the image to a string of 0 (off) and 1 (on)
-     * @param img eg:images.createImage(`. . . . . . # . # . . . . . . # . . . . . # # # .`)
+     * @param img eg:images.createImage('\n. . . . .\n. # . # .\n. . . . .\n# . . . #\n. # # # .\n')
      */
     //% block="to string $img" blockId=imgToStr
     //% group="Returns string"
@@ -264,7 +264,7 @@ namespace extra {
         for (let x=0;x<5;x++) {
             for (let y=0;y<5;y++) {
                 temp=0;
-                if (img.pixel(x,y)) {
+                if (img.pixel(y,x)) {
                     temp=1;
                 }
                 output = output + temp
