@@ -86,12 +86,12 @@ namespace extra {
     
     //% block="plot binary $numb offset $offset reversed $reversed"
     //% group="Default blocks"
-    export function binView(numb:number,offset:number,reversed:boolean) : void {
+    export function plotBin(numb:number,offset:number,reversed:boolean) : void {
         for (let index = 0; index <= 24; index++) {
             if (numb >= 2 ** (24 - index)) {
                 numb += -1 * 2 ** (24 - index)
                 if (reversed) {
-                    led.plot((0-offset+index) % 5, Math.floor((0-offset+index ) / 5))
+                    led.plot((offset-index) % 5, Math.floor((offset-index ) / 5))
                 } else {
                     led.plot((offset+24-index) % 5, Math.floor((offset+24-index ) / 5))
                 }
