@@ -242,11 +242,12 @@ namespace extra {
     }
     /**
      * Plots the given led list to the leds. Works only when list has 25 elements.
+     * @param leds eg:array25(1)
      */
     //% block="plot led list $leds" blockId=plotLedList
     //% group="Default blocks"
 
-    export function plotLedList(leds: number[] = array25(1)) : void {
+    export function plotLedList(leds: number[]) : void {
         if (leds.length==25) {
             for (let i = 0; i <= 24; i++) {
                 if (leds[i]==1) {
@@ -257,6 +258,7 @@ namespace extra {
     }
     /**
      * Plot or unplot a 7-segment 1-digit number.
+     * @param offset eg:1
      */
     //% block="$mode 7-seg 1-digit number $value offset $offset" blockId=seg7
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
@@ -290,12 +292,13 @@ namespace extra {
     }
     /**
      * Plot or unplot a 7-segment 2-digit number.
+     * @param value eg:10
      */
     //% block="$mode 7-seg 2-digit number $value" blockId=seg72
     //% value.min=10 value.max=19
     //% group="Default blocks"
 
-    export function seg72(mode:Mode,value:number=10):void {
+    export function seg72(mode:Mode,value:number):void {
         for (let y = 0; y <= 4; y++) {
         if (mode) {
             //unplot
