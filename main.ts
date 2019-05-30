@@ -252,10 +252,10 @@ namespace extra {
     }
 
     /**
-     * Convert the image to a string of 0 (off) and 1 (on)
-     * @param img eg:myImage
+     * Convert the image to a string containing 25x 0 (off) and 1 (on)
+     * @param img
      */
-    //% block="to string $img" blockId=imgToStr
+    //% block="image to string $img" blockId=imgToStr
     //% group="Returns string"
 
     export function imgToStr(img: Image): string {
