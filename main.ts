@@ -263,6 +263,37 @@ namespace extra {
             }
         }
     }
+    
+    /**
+     * Convert the image to a string of 0 (off) and 1 (on)
+     * @param leds eg:images.createImage(`
+    . . . . .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
+     */
+    //% block="to string $img" blockId=imgToStr
+    //% group="Returns string"
+
+    export function imgToStr(img: Image) : string {
+        let output='';
+        let temp = 0;
+        for (let x=0;x<5;x++) {
+            for (let y=0;y<5;y++) {
+                temp=0;
+                if (img.pixel(x,y)) {
+                    temp=1;
+                }
+                output = output + temp
+            }
+            output = output + ' '
+        }
+        return output;
+    }
+    
+    
     /**
      * Plot or unplot a 7-segment 1-digit number.
      * @param offset eg:1
