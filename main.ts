@@ -1,5 +1,5 @@
 
-//% color="#11bb11" block="Extra Functions" weight=100 icon="\u9055"
+//% color="#11bb11" block="Extra Functions" weight=100 icon="⍨"
 //% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
 namespace extra {
     
