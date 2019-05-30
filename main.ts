@@ -256,7 +256,9 @@ namespace extra {
         let indexNum = 0;
         for (let char of leds) {
             if (char=='0' || char=='1') {
-                led.plot(Math.idiv(indexNum,5),indexNum%5);
+                if (char=='1') {
+                    led.plot(Math.idiv(indexNum,5),indexNum%5);
+                }
                 indexNum++;
             }
         }
