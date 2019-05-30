@@ -310,6 +310,7 @@ namespace extra {
     
     /**
      * Stackable block to create extremely large blocks.
+     * @param value eg:3
      */
     //% block="$value" blockId=numb
     //% group="Returns number"
