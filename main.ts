@@ -148,7 +148,7 @@ namespace extra {
 
     }
     
-    //% block="Every $ms ms, start directly $startDirectly, " blockId=onEvent
+    //% block="every $ms ms, start directly $startDirectly, " blockId=onEvent
     //% group="Events"
     export function onEvent(ms:number,startDirectly:boolean,handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum : number = 1;
