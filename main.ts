@@ -229,35 +229,35 @@ namespace extra {
             return false;
         }
     }
-   
-    //% block="list of 25 numbers $e" blockId=array25
-    //% group="Returns list of numbers"
+    /*
+    //% block="string of 25 numbers $e" blockId=str25
+    //% group="Returns string"
     /**
-     * Returns an array with 25 elements
+     * Returns an string with 25 numbers
      * @param e eg:1
-     */
-    export function array25(e: number) : number[] {
-        let list: number[] = [];
+     *
+    export function str25(e: number) : string {
+        let str: string = '';
         for (let i = 0; i <= 24; i++) {
-            list.push(e);
+            str=str+e;
         }
-        return list;
-    }
+        return str;
+    }*/
     /**
      * Plots the given led list to the leds. Works only when list has 25 elements.
-     * @param leds eg:extra.array25(1)
+     * @param leds eg:"00000 01010 00000 10001 01110"
      */
     //% block="plot led list $leds" blockId=plotLedList
     //% group="Default blocks"
 
-    export function plotLedList(leds: number[]) : void {
+    export function plotLedList(leds: string) : void {/*
         if (leds.length==25) {
             for (let i = 0; i <= 24; i++) {
                 if (leds[i]==1) {
                     led.plot(i % 5, Math.floor(i / 5));
                 }
             }
-        }
+        }*/
     }
     /**
      * Plot or unplot a 7-segment 1-digit number.
