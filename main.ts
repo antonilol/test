@@ -36,7 +36,7 @@ namespace extra {
         s8=8,
     }
     
-    //% block="Every $ms ms, start directly $startDirectly, "
+    //% block="Every $ms ms, start directly $startDirectly, " blockId=onEvent
     //% group="Events"
     export function onEvent(ms:number,startDirectly:boolean,handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum : number = 1;
@@ -65,7 +65,7 @@ namespace extra {
     
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=3
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="250"
-    //% block="Define function with number arg $slot"
+    //% block="define function with number arg $slot" blockId=defFunction
     //% group="Extra"
     export function defFunction(slot:Slot,handler: (arg:number) => void) {
         let arg:number;
@@ -75,7 +75,7 @@ namespace extra {
     }
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=3
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="250"
-    //% block="Call function with number arg $slot $arg"
+    //% block="call function with number arg $slot $arg" blockId=callFunction
     //% group="Extra"
     export function callFunction(slot:Slot,arg:number) {
         
@@ -85,7 +85,7 @@ namespace extra {
     
     
     //% block="plot binary $numb offset $offset reversed $reversed"
-    //% group="Default blocks"
+    //% group="Default blocks" blockId=plotBin
     export function plotBin(numb:number,offset:number,reversed:boolean) : void {
         for (let index = 0; index <= 24; index++) {
             if (numb >= 2 ** (24 - index)) {
@@ -98,7 +98,7 @@ namespace extra {
             }
         }
     }
-    //% block="$a $x $b"
+    //% block="$a $x $b" blockId=op
     //% group="Returns boolean"
     export function op(a: boolean, x: Bool, b: boolean) : boolean {
         if (x==0) {
@@ -118,7 +118,7 @@ namespace extra {
         }
     }
    
-    //% block="list of 25 numbers $e"
+    //% block="list of 25 numbers $e" blockId=array25
     //% group="Returns list of numbers"
 
     export function array25(e: number) : number[] {
@@ -131,7 +131,7 @@ namespace extra {
     /**
      * Plots the given led list to the leds. Works only when list has 25 elements.
      */
-    //% block="plot led list $leds"
+    //% block="plot led list $leds" blockId=plotLedList
     //% group="Default blocks"
 
     export function plotLedList(leds: number[] = array25(1)) : void {
@@ -146,7 +146,7 @@ namespace extra {
     /**
      * Plot or unplot a 7-segment 1-digit number.
      */
-    //% block="$mode 7-seg 1-digit number $value offset $offset"
+    //% block="$mode 7-seg 1-digit number $value offset $offset" blockId=seg7
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
     //% group="Default blocks"
 
@@ -179,7 +179,7 @@ namespace extra {
     /**
      * Plot or unplot a 7-segment 2-digit number.
      */
-    //% block="$mode 7-seg 2-digit number $value"
+    //% block="$mode 7-seg 2-digit number $value" blockId=seg72
     //% value.min=10 value.max=19
     //% group="Default blocks"
 
@@ -199,7 +199,7 @@ namespace extra {
     /**
      * Stackable block to create extremely large blocks.
      */
-    //% block="$value"
+    //% block="$value" blockId=numb
     //% group="Returns number"
 
     export function numb(value:number):number{
