@@ -253,12 +253,7 @@ namespace extra {
     
     /**
      * Convert the image to a string of 0 (off) and 1 (on)
-     * @param img eg:images.createImage(`\n . . . . .
-    . # . # .
-    . . . . .
-    # . . . #
-    . # # # .
-    `)
+     * @param img eg:images.createImage(`. . . . . . # . # . . . . . . # . . . . . # # # .`)
      */
     //% block="to string $img" blockId=imgToStr
     //% group="Returns string"
