@@ -234,7 +234,8 @@ namespace extraFunctions {
     //% group="Returns image"
     export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
 
-        let output=images.createImage(`
+        let output:Image=null
+        output=images.createImage(`
         . . . . .
         . . . . .
         . . . . .
