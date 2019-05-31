@@ -1,5 +1,5 @@
 
-//% color="#11bb11" block="Extra Functions" weight=100 icon="#"
+//% color="#11bb11" block="Extra Functions (NEW)" weight=100 icon="#"
 //
 // OLD GROUPS:
 // groups="['Returns image', Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
@@ -386,7 +386,7 @@ namespace extraFunctions {
 }
     
     
-    //% color="#11bb11" block="Extra Functions" weight=100 icon="⍨"
+    //% color="#11bb11" block="Extra Functions (OLD)" weight=100 icon="⍨"
 //% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
 namespace extra {
     
