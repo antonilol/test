@@ -1,6 +1,6 @@
 
 //% color="#11bb11" block="Extra Functions" weight=100 icon="*"
-//% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
+//% groups="['Returns image', Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
 namespace extra {
 
     export enum Bool {
@@ -228,6 +228,39 @@ namespace extra {
         } else {
             return false;
         }
+    }
+
+    //% block="$a $x $b" blockId=opImg
+    //% group="Returns image"
+    export function opImg(a: Image, x: Bool, b: Image): Image {
+
+        let output=images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+        for (let imgx=0;imgx<5;imgx++){
+            for (let imgy = 0; imgy < 5; imgy++) {
+                if (x == 0) {
+                    output.setPixel(imgy,imgx,a.pixel(imgy, imgx) && b.pixel(imgy, imgx));
+                }/* else if (x == 1) {
+                    return (a || b);
+                } else if (x == 2) {
+                    return !(a && b);
+                } else if (x == 3) {
+                    return !(a || b);
+                } else if (x == 5) {
+                    return ((!(a) && !(b)) || (a && b));
+                } else if (x == 4) {
+                    return ((!(a) && b) || (a && !(b)));
+                } else {
+                    return false;
+                }   */
+            }
+        }
+    return output;
     }
 
 
