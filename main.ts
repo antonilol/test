@@ -232,7 +232,7 @@ namespace extra {
 
     //% block="$a $x $b" blockId=opImg
     //% group="Returns image"
-    export function opImg(a: Image, x: Bool, b: Image): Image {
+    export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
 
         let output=images.createImage(`
         . . . . .
@@ -241,23 +241,27 @@ namespace extra {
         . . . . .
         . . . . .
         `)
+        let a:boolean
+        let b:boolean
         for (let imgx=0;imgx<5;imgx++){
             for (let imgy = 0; imgy < 5; imgy++) {
+                a = imgA.pixel(imgy, imgx);
+                b = imgB.pixel(imgy, imgx);
                 if (x == 0) {
-                    output.setPixel(imgy,imgx,a.pixel(imgy, imgx) && b.pixel(imgy, imgx));
-                }/* else if (x == 1) {
-                    return (a || b);
+                    output.setPixel(imgy,imgx,a && b);
+                } else if (x == 1) {
+                    output.setPixel(imgy,imgx,a || b);
                 } else if (x == 2) {
-                    return !(a && b);
+                    output.setPixel(imgy,imgx,!(a && b));
                 } else if (x == 3) {
-                    return !(a || b);
+                    output.setPixel(imgy,imgx,!(a || b));
                 } else if (x == 5) {
-                    return ((!(a) && !(b)) || (a && b));
+                    output.setPixel(imgy,imgx,(!(a) && !(b)) || (a && b));
                 } else if (x == 4) {
-                    return ((!(a) && b) || (a && !(b)));
+                    output.setPixel(imgy,imgx,(!(a) && b) || (a && !(b)));
                 } else {
-                    return false;
-                }   */
+                    output.setPixel(imgy,imgx,false);
+                }   
             }
         }
     return output;
