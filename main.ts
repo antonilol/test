@@ -1,6 +1,10 @@
 
 //% color="#11bb11" block="Extra Functions" weight=100 icon="#"
-//% groups="['Returns image', Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
+//
+// OLD GROUPS:
+// groups="['Returns image', Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
+// <=========>
+//
 namespace extraFunctions {
 
     export enum Bool {
@@ -149,7 +153,7 @@ namespace extraFunctions {
     }
 
     //% block="every $ms ms, start directly $startDirectly, " blockId=onEvent
-    //% group="Events"
+    // group="Events"
     export function onEvent(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum: number = 1;
         let totalWaitingTime: number = 0;
@@ -178,7 +182,7 @@ namespace extraFunctions {
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
     //% block="define function with number arg $slot" blockId=defFunction
-    //% group="Extra"
+    // group="Extra"
     export function defFunction(slot: Slot, handler: (arg: number) => void) {
         let arg: number;
 
@@ -188,7 +192,7 @@ namespace extraFunctions {
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
     //% block="call function with number arg $slot $arg" blockId=callFunction
-    //% group="Extra"
+    // group="Extra"
     export function callFunction(slot: Slot, arg: number) {
 
         func[slot](arg);
@@ -196,8 +200,8 @@ namespace extraFunctions {
     }
 
 
-    //% block="plot binary $numb offset $offset reversed $reversed"
-    //% group="Default blocks" blockId=plotBin
+    //% block="plot binary $numb offset $offset reversed $reversed" blockId=plotBin
+    // group="Default blocks" 
     export function plotBin(numb: number, offset: number, reversed: boolean): void {
         for (let index = 0; index <= 24; index++) {
             if (numb >= 2 ** (24 - index)) {
@@ -211,7 +215,7 @@ namespace extraFunctions {
         }
     }
     //% block="$a $x $b" blockId=op
-    //% group="Returns boolean"
+    // group="Returns boolean"
     export function op(a: boolean, x: Bool, b: boolean): boolean {
         if (x == 0) {
             return (a && b);
@@ -231,7 +235,7 @@ namespace extraFunctions {
     }
 
     //% block="$a $x $b" blockId=opImg
-    //% group="Returns image"
+    // group="Returns image"
     export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
 
         let output:Image=null
@@ -275,7 +279,7 @@ namespace extraFunctions {
      * @param leds eg:"00000 01010 00000 10001 01110"
      */
     //% block="plot led string $leds" blockId=plotLedStr
-    //% group="Default blocks"
+    // group="Default blocks"
 
     export function plotLedStr(leds: string): void {
         let indexNum = 0;
@@ -294,7 +298,7 @@ namespace extraFunctions {
      * @param img
      */
     //% block="image to string $img" blockId=imgToStr
-    //% group="Returns string"
+    // group="Returns string"
 
     export function imgToStr(img: Image): string {
         let output = '';
@@ -319,7 +323,7 @@ namespace extraFunctions {
      */
     //% block="$mode 7-seg 1-digit number $value offset $offset" blockId=seg7
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
-    //% group="Default blocks"
+    // group="Default blocks"
 
     export function seg7(mode: Mode, value: number, offset: number): void {
         let list: number[][] = [[[1, 1, 1], [1, 0, 1], [1, 0, 1], [1, 0, 1], [1, 1, 1]],
@@ -353,7 +357,7 @@ namespace extraFunctions {
      */
     //% block="$mode 7-seg 2-digit number $value" blockId=seg72
     //% value.min=10 value.max=19
-    //% group="Default blocks"
+    // group="Default blocks"
 
     export function seg72(mode: Mode, value: number): void {
         for (let y = 0; y <= 4; y++) {
@@ -374,7 +378,7 @@ namespace extraFunctions {
      * @param value eg:3
      */
     //% block="$value" blockId=numb
-    //% group="Returns number"
+    // group="Returns number"
 
     export function numb(value: number): number {
         return value;
