@@ -240,9 +240,9 @@ namespace extra {
         . . . . .
         . . . . .
         . . . . .
-        `)
-        let a:boolean
-        let b:boolean
+        `);
+        let a:boolean;
+        let b:boolean;
         for (let imgx=0;imgx<5;imgx++){
             for (let imgy = 0; imgy < 5; imgy++) {
                 a = imgA.pixel(imgy, imgx);
