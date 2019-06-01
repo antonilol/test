@@ -213,57 +213,7 @@ namespace extra {
 
 
 
-    /**
-     * Plot or unplot a 7-segment 1-digit number.
-     * @param offset eg:1
-     */
-    //% block="$mode 7-seg 1-digit number $value offset $offset" blockId=seg7
-    //% value.min=0 value.max=9 offset.min=0 offset.max=2
-    export function seg7(mode: Mode, value: number, offset: number): void {
-        let list: number[][] = [[[1, 1, 1], [1, 0, 1], [1, 0, 1], [1, 0, 1], [1, 1, 1]],
-        [[0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1]],
-        [[1, 1, 1], [0, 0, 1], [1, 1, 1], [1, 0, 0], [1, 1, 1]],
-        [[1, 1, 1], [0, 0, 1], [1, 1, 1], [0, 0, 1], [1, 1, 1]],
-        [[1, 0, 1], [1, 0, 1], [1, 1, 1], [0, 0, 1], [0, 0, 1]],
-        [[1, 1, 1], [1, 0, 0], [1, 1, 1], [0, 0, 1], [1, 1, 1]],
-        [[1, 1, 1], [1, 0, 0], [1, 1, 1], [1, 0, 1], [1, 1, 1]],
-        [[1, 1, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1]],
-        [[1, 1, 1], [1, 0, 1], [1, 1, 1], [1, 0, 1], [1, 1, 1]],
-        [[1, 1, 1], [1, 0, 1], [1, 1, 1], [0, 0, 1], [1, 1, 1]]][value];
-        for (let y = 0; y <= 4; y++) {
-            for (let x = 0; x <= 2; x++) {
-                if (list[y][x]) {
-                    if (mode) {
-                        //unplot
-                        led.unplot(x + offset, y);
-                    } else {
-                        //plot
-                        led.plot(x + offset, y);
-                    }
-                }
-            }
-        }
-    }
-    /**
-     * Plot or unplot a 7-segment 2-digit number.
-     * @param value eg:10
-     */
-    //% block="$mode 7-seg 2-digit number $value" blockId=seg72
-    //% value.min=10 value.max=19
-    export function seg72(mode: Mode, value: number): void {
-        for (let y = 0; y <= 4; y++) {
-            if (mode) {
-                //unplot
-                led.unplot(0, y);
-
-            } else {
-                //plot
-                led.plot(0, y);
-            }
-            seg7(mode, value - 10, 2);
-        }
-    }
-
+    
     /**
      * Stackable block to create extremely large blocks.
      * @param value eg:3

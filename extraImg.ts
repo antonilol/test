@@ -162,4 +162,71 @@ namespace extra_img {
         }
     }
 
+    /**
+     * Returns an image with a 7-segment 1-digit number.
+     * @param offset eg:1
+     */
+    //% block="7-seg 1-digit image number $value offset $offset" blockId=seg7
+    //% value.min=0 value.max=9 offset.min=0 offset.max=2
+    export function seg7(value: number, offset: number): Image {
+        let output: Image = null
+        output = images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+        if (value >= 0 && value <= 9) {
+            let list: number[][] = [[[1, 1, 1], [1, 0, 1], [1, 0, 1], [1, 0, 1], [1, 1, 1]],
+            [[0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1]],
+            [[1, 1, 1], [0, 0, 1], [1, 1, 1], [1, 0, 0], [1, 1, 1]],
+            [[1, 1, 1], [0, 0, 1], [1, 1, 1], [0, 0, 1], [1, 1, 1]],
+            [[1, 0, 1], [1, 0, 1], [1, 1, 1], [0, 0, 1], [0, 0, 1]],
+            [[1, 1, 1], [1, 0, 0], [1, 1, 1], [0, 0, 1], [1, 1, 1]],
+            [[1, 1, 1], [1, 0, 0], [1, 1, 1], [1, 0, 1], [1, 1, 1]],
+            [[1, 1, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1]],
+            [[1, 1, 1], [1, 0, 1], [1, 1, 1], [1, 0, 1], [1, 1, 1]],
+            [[1, 1, 1], [1, 0, 1], [1, 1, 1], [0, 0, 1], [1, 1, 1]]][value];
+            for (let y = 0; y <= 4; y++) {
+                for (let x = 0; x <= 2; x++) {
+                    if (list[y][x]) {
+                        
+                            
+                            output.setPixel(x + offset, y,true);
+                        
+                    }
+                }
+            }
+        }
+        return output
+    }
+    /**
+     * Returns an image with a 7-segment 2-digit number.
+     * @param value eg:10
+     */
+    //% block="7-seg 2-digit image number $value" blockId=seg72
+    //% value.min=10 value.max=19
+    export function seg72(value: number): Image {
+        let output: Image = null
+        output = images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+        if (value >= 10 && value <= 19) {
+            for (let y = 0; y <= 4; y++) {
+                
+                    
+                    output.setPixel(0, y,true);
+            }
+            seg7( value - 10, 2);
+            
+        }
+        return output
+    }
+
+
 }
