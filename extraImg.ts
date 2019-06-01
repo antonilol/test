@@ -30,8 +30,8 @@ namespace extraImg {
 
     /**
      * Boolean operators for images
-     * @param imgA eg:emptyImage()
-     * @param imgB eg:emptyImage()
+     * @param imgA eg:extraImg.emptyImage()
+     * @param imgB eg:extraImg.emptyImage()
      */
     //% block="$imgA $x $imgB" blockId=opImg
     export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
@@ -72,7 +72,7 @@ namespace extraImg {
     }
     /**
      * Boolean operator not for images
-     * @param img eg:emptyImage()
+     * @param img eg:extraImg.emptyImage()
      */
     //% block="inverted $img" blockId=notImg
     export function notImg(img: Image): Image {
