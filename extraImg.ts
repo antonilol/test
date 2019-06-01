@@ -117,7 +117,7 @@ namespace extra_img {
     }
     /**
      * Edit a particular pixel on an image
-     * @param img eg:null
+     * @param img eg:%sprite(myImage)
      */
     //% block="edit image $img x $x y $y to $newvalue" blockId=editImage
     export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
