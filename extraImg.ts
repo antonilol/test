@@ -222,7 +222,7 @@ namespace extra_img {
                     
                     output.setPixel(0, y,true);
             }
-            seg7( value - 10, 2);
+            output=opImg(output,seg7( value - 10, 2),Operator.or);
             
         }
         return output
