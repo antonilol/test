@@ -8,8 +8,28 @@ namespace extraImg {
         nor = 3,
         xor = 4,
         xnor = 5
+    
+    
     }
 
+    //% block="empty image" blockId=emptyImage
+    export function emptyImage(): Image {
+        return images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `);
+    }
+
+
+
+    /**
+     * Boolean operators for images
+     * @param imgA eg:emptyImage()
+     * @param imgB eg:emptyImage()
+     */
     //% block="$imgA $x $imgB" blockId=opImg
     export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
         let output: Image = null
@@ -47,7 +67,10 @@ namespace extraImg {
         }
         return output;
     }
-
+    /**
+     * Boolean operator not for images
+     * @param img eg:emptyImage()
+     */
     //% block="inverted $img" blockId=notImg
     export function notImg(img: Image): Image {
         let output: Image = null
