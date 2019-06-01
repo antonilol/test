@@ -27,26 +27,19 @@ namespace extraImg {
 
     }
     /**
-     * Returns an empty image
-     * Replace me with an create image block
+     * Returns null
      */
-    //% block="empty image" blockId=emptyImage
-    export function emptyImage(): Image {
-        return images.createImage(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `);
+    //% block="null" blockId=nothing
+    export function nothing(): null {
+        return null;
     }
 
 
 
     /**
      * Boolean operators for images
-     * @param imgA eg:extraImg.emptyImage()
-     * @param imgB eg:extraImg.emptyImage()
+     * @param imgA eg:extraImg.nothing()
+     * @param imgB eg:extraImg.nothing()
      */
     //% block="(a = $imgA, b = $imgB) $x" blockId=opImg
     export function opImg(imgA: Image, imgB: Image, x: Operator): Image {
@@ -82,9 +75,9 @@ namespace extraImg {
                     } else if (x == 7) {
                         output.setPixel(imgy, imgx, !b);
                     } else if (x == 8) {
-                        output.setPixel(imgy, imgx, a==true&&a!=b);
+                        output.setPixel(imgy, imgx, a&&(a!=b));
                     } else if (x == 9) {
-                        output.setPixel(imgy, imgx, b==true&&a!=b);
+                        output.setPixel(imgy, imgx, b&&(a!=b));
                     } else {
                         output.setPixel(imgy, imgx, false);
                     }
@@ -95,7 +88,7 @@ namespace extraImg {
     }
     /**
      * Boolean operator not for images
-     * @param img eg:extraImg.emptyImage()
+     * @param img eg:extraImg.nothing()
      */
     //% block="inverted $img" blockId=notImg
     export function notImg(img: Image): Image {
@@ -118,7 +111,7 @@ namespace extraImg {
     }
     /**
      * Shows the given image
-     * @param img eg:extraImg.emptyImage()
+     * @param img eg:extraImg.nothing()
      */
     //% block="show image $img" blockId=showImage
     export function showImg(img: Image): void {
