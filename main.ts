@@ -13,6 +13,7 @@ namespace extra {
         plot = 0,
         unplot = 1
     }
+
     export enum Slot {
         //% block="1"
         s1 = 0,

@@ -37,6 +37,33 @@ namespace extra_img {
         . . . . .
         `);
     }
+    //% block="filled image" blockId=filled
+    export function filled(): Image {
+        return images.createImage(`
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        `);
+    }
+    //% block="random image" blockId=random
+    export function random(): Image {
+        let output:Image=null
+        output = images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+        for (let imgx = 0; imgx < 5; imgx++) {
+            for (let imgy = 0; imgy < 5; imgy++) {
+                output.setPixel(imgx, imgy, Math.randomBoolean())
+            }
+        }
+        return output
+    }
 
     /**
      * Boolean operators for images
