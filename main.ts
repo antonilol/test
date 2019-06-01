@@ -209,8 +209,10 @@ namespace extra {
             return false;
         }
     }
-
-
+    //% block="$x" blockId=boolNumb
+    export function boolNumb(x:number):boolean{
+        return x!=0
+    }
 
 
     

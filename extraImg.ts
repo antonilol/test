@@ -191,10 +191,7 @@ namespace extra_img {
             for (let y = 0; y <= 4; y++) {
                 for (let x = 0; x <= 2; x++) {
                     if (list[y][x]) {
-                        
-                            
-                            output.setPixel(x + offset, y,true);
-                        
+                        output.setPixel(x + offset, y,true);
                     }
                 }
             }
@@ -218,12 +215,9 @@ namespace extra_img {
         `)
         if (value >= 10 && value <= 19) {
             for (let y = 0; y <= 4; y++) {
-                
-                    
                     output.setPixel(0, y,true);
             }
-            output=opImg(output,seg7( value - 10, 2),Operator.or);
-            
+            output=opImg(output,seg7(value - 10, 2),Operator.or);
         }
         return output
     }
