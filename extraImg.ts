@@ -11,7 +11,10 @@ namespace extraImg {
     
     
     }
-
+    /**
+     * Returns an empty image
+     * Replace me with an create image block
+     */
     //% block="empty image" blockId=emptyImage
     export function emptyImage(): Image {
         return images.createImage(`
