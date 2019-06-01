@@ -166,9 +166,9 @@ namespace extra2 {
 
 
 
-    let func: ((x: number) => void)[] = [function (x: number) { }];
+    let func2: ((x: number) => void)[] = [function (x: number) { }];
     for (let _i = 0; _i <= 63; _i++) {
-        func.push(function (x: number) { })
+        func2.push(function (x: number) { })
     }
 
 
@@ -179,7 +179,7 @@ namespace extra2 {
     export function defFunction(slot: Slot, handler: (arg: number) => void) {
         let arg: number;
 
-        func[slot] = handler;
+        func2[slot] = handler;
 
     }
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
@@ -187,7 +187,7 @@ namespace extra2 {
     //% block="call function with number arg $slot $arg" blockId=callFunction
     export function callFunction(slot: Slot, arg: number) {
 
-        func[slot](arg);
+        func2[slot](arg);
 
     }
 
