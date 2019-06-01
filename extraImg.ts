@@ -27,7 +27,16 @@ namespace extra_img {
 
     }
     
-
+    //% block="empty image" blockId=empty
+    export function empty(): Image {
+        return images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `);
+    }
 
     /**
      * Boolean operators for images
@@ -117,12 +126,13 @@ namespace extra_img {
     }
     /**
      * Edit a particular pixel on an image
-     * @param img eg:myImage
+     * @param img eg:
      */
-    //% block=" %sprite(myImage) edit image $img x $x y $y to $newvalue" blockId=editImage
+    //% block="edit image $img x $x y $y to $newvalue" blockId=editImage
     export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
-        img.setPixel(x,y,newvalue)
-        
+        if (img){
+            img.setPixel(x,y,newvalue)
+        }
     }
 
 }
