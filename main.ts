@@ -258,6 +258,39 @@ namespace extra {
     }
 
 
+    //% block="inverted $img" blockId=notImg
+    export function notImg(img: Image): Image {
+        let output: Image = null
+        output = images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `);
+        
+        for (let imgx = 0; imgx < 5; imgx++) {
+            for (let imgy = 0; imgy < 5; imgy++) {
+                output.setPixel(imgy, imgx, !img.pixel(imgy, imgx));
+                /*} else if (x == 1) {
+                    output.setPixel(imgy, imgx, a || b);
+                } else if (x == 2) {
+                    output.setPixel(imgy, imgx, !(a && b));
+                } else if (x == 3) {
+                    output.setPixel(imgy, imgx, !(a || b));
+                } else if (x == 5) {
+                    output.setPixel(imgy, imgx, (!(a) && !(b)) || (a && b));
+                } else if (x == 4) {
+                    output.setPixel(imgy, imgx, (!(a) && b) || (a && !(b)));
+                } else {
+                    output.setPixel(imgy, imgx, false);
+                }*/
+            }
+        }
+        return output;
+    }
+
+
 
     /**
      * Plots the given led string to the leds. Works only when list has 25 elements.
