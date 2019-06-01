@@ -2,7 +2,7 @@
 
 //% color="#11bb11" block="Extra Functions (OLD)" weight=100 icon="⍨"
 //% groups="['Returns boolean', 'Returns number', 'Returns string', 'Returns list of numbers', 'Default blocks', 'Events', 'Extra']"
-namespace extra {
+namespace extra_ {
 
     export enum Bool {
         and = 0,

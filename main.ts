@@ -221,7 +221,7 @@ namespace extra {
         }
     }
 
-    //% block="$a $x $b" blockId=opImg
+    //% block="$imgA $x $imgB" blockId=opImg
     export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
         let output: Image = null
         output = images.createImage(`
