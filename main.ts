@@ -172,7 +172,7 @@ namespace extra {
 
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
-    //% block="define function with number arg $slot" blockId=defFunction
+    //% block="define function with number arg (slot=$slot)" blockId=defFunction
     export function defFunction(slot: Slot, handler: (arg: number) => void) {
         let arg: number;
 
@@ -181,7 +181,7 @@ namespace extra {
     }
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
-    //% block="call function with number arg $slot $arg" blockId=callFunction
+    //% block="call function with number arg $arg (slot=$slot)" blockId=callFunction
     export function callFunction(slot: Slot, arg: number) {
 
         func2[slot](arg);
