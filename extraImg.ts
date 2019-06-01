@@ -34,6 +34,8 @@ namespace extraImg {
      * @param imgA eg:null
      * @param imgB eg:null
      */
+    //% x.fieldEditor="gridpicker" x.fieldOptions.columns=2
+    //% x.fieldOptions.tooltips="false" x.fieldOptions.width="200"
     //% block="(a = $imgA, b = $imgB) $x" blockId=opImg
     export function opImg(imgA: Image, imgB: Image, x: Operator): Image {
         let output: Image = null
