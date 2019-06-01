@@ -1,15 +1,30 @@
 //% color="#11BB11" block="Extra Functions Images" weight=100 icon="\uf03e"
 namespace extraImg {
     
-    export enum Bool {
+    export enum Operator {
+        //% block="a and b"
         and = 0,
+        //% block="a or b"
         or = 1,
+        //% block="not(a and b)"
         nand = 2,
+        //% block="not(a or b)"
         nor = 3,
+        //% block="a xor b"
         xor = 4,
-        xnor = 5
-    
-    
+        //% block="not(a xor b)"
+        xnor = 5,
+        //% block="not(a)"
+        inv1 = 6,
+        //% block="not(b)"
+        inv2 = 7,
+        //% block="a - b"
+        min1 = 8,
+        //% block="b - a"
+        min2 = 9,
+        
+        
+
     }
     /**
      * Returns an empty image
@@ -33,8 +48,8 @@ namespace extraImg {
      * @param imgA eg:extraImg.emptyImage()
      * @param imgB eg:extraImg.emptyImage()
      */
-    //% block="$imgA $x $imgB" blockId=opImg
-    export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
+    //% block="(a = $imgA, b = $imgB) $x" blockId=opImg
+    export function opImg(imgA: Image, imgB: Image, x: Operator): Image {
         let output: Image = null
         output = images.createImage(`
         . . . . .
@@ -58,10 +73,18 @@ namespace extraImg {
                         output.setPixel(imgy, imgx, !(a && b));
                     } else if (x == 3) {
                         output.setPixel(imgy, imgx, !(a || b));
-                    } else if (x == 5) {
-                        output.setPixel(imgy, imgx, (!(a) && !(b)) || (a && b));
                     } else if (x == 4) {
-                        output.setPixel(imgy, imgx, (!(a) && b) || (a && !(b)));
+                        output.setPixel(imgy, imgx, a!=b);
+                    } else if (x == 5) {
+                        output.setPixel(imgy, imgx, a==b);
+                    } else if (x == 6) {
+                        output.setPixel(imgy, imgx, !a);
+                    } else if (x == 7) {
+                        output.setPixel(imgy, imgx, !b);
+                    } else if (x == 8) {
+                        output.setPixel(imgy, imgx, a==true&&a!=b);
+                    } else if (x == 9) {
+                        output.setPixel(imgy, imgx, b==true&&a!=b);
                     } else {
                         output.setPixel(imgy, imgx, false);
                     }

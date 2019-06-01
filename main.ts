@@ -144,7 +144,7 @@ namespace extra {
         s64 = 63
     }
 
-    //% block="every $ms ms, start directly:$startDirectly  " blockId=onEvent
+    //% block="every $ms ms, start directly $startDirectly  " blockId=onEvent
     export function onEvent(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum: number = 1;
         let totalWaitingTime: number = 0;
