@@ -1,5 +1,5 @@
 //% color="#11BB11" block="Extra Functions (NEW)" weight=100 icon="+"
-namespace extra2 {
+namespace extra {
 
     export enum Bool {
         and = 0,
@@ -142,8 +142,6 @@ namespace extra2 {
         s63 = 62,
         //% block="64"
         s64 = 63
-
-
     }
 
     //% block="every $ms ms, start directly:$startDirectly  " blockId=onEvent
