@@ -28,20 +28,13 @@ namespace extraImg {
         
 
     }
-    /**
-     * Returns null
-     */
-    //% block="null Image" blockId=nothing
-    export function nothing(): Image {
-        return null;
-    }
-
+    
 
 
     /**
      * Boolean operators for images
-     * @param imgA eg:extraImg.nothing()
-     * @param imgB eg:extraImg.nothing()
+     * @param imgA eg:null
+     * @param imgB eg:null
      */
     //% block="(a = $imgA, b = $imgB) $x" blockId=opImg
     export function opImg(imgA: Image, imgB: Image, x: Operator): Image {
@@ -53,7 +46,7 @@ namespace extraImg {
         . . . . .
         . . . . .
         `);
-        if (imgA && imgB){
+        if ((imgA && imgB)||(x==6&&imgA)||(x==7&&imgB)){
             let a: boolean = false;
             let b: boolean = false;
             for (let imgx = 0; imgx < 5; imgx++) {
@@ -90,7 +83,7 @@ namespace extraImg {
     }
     /**
      * Boolean operator not for images
-     * @param img eg:extraImg.nothing()
+     * @param img eg:null
      */
     //% block="inverted $img" blockId=notImg
     export function notImg(img: Image): Image {
@@ -113,7 +106,7 @@ namespace extraImg {
     }
     /**
      * Shows the given image
-     * @param img eg:extraImg.nothing()
+     * @param img eg:null
      */
     //% block="show image $img" blockId=showImage
     export function showImg(img: Image): void {
