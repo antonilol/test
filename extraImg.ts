@@ -93,4 +93,14 @@ namespace extraImg {
         }
         return output;
     }
+    /**
+     * Shows the given image
+     * @param img eg:extraImg.emptyImage()
+     */
+    //% block="show image $img" blockId=showImage
+    export function showImg(img: Image): void {
+        if (img){
+            img.showImage(0)
+        }
+    }
 }
