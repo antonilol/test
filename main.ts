@@ -1,4 +1,4 @@
-//% color="#11bb11" block="Extra Functions (NEW)" weight=100 icon="+"
+//% color="#11BB11" block="Extra Functions (NEW)" weight=100 icon="+"
 namespace extra2 {
 
     export enum Bool {
@@ -233,8 +233,8 @@ namespace extra2 {
         . . . . .
         . . . . .
         `);
-        let a: boolean;
-        let b: boolean;
+        let a: boolean=false;
+        let b: boolean=false;
         for (let imgx = 0; imgx < 5; imgx++) {
             for (let imgy = 0; imgy < 5; imgy++) {
                 a = imgA.pixel(imgy, imgx);
