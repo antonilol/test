@@ -1,6 +1,4 @@
-
 //% color="#11bb11" block="Extra Functions (NEW)" weight=100 icon="#"
-
 namespace extraFunctions {
 
     export enum Bool {
@@ -143,12 +141,12 @@ namespace extraFunctions {
         //% block="63"
         s63 = 62,
         //% block="64"
-        s64 = 63,
+        s64 = 63
 
 
     }
 
-    //% block="every $ms ms, start directly $startDirectly, " blockId=onEvent
+    //% block="every $ms ms, start directly:$startDirectly  " blockId=onEvent
     
     export function onEvent(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum: number = 1;
@@ -178,7 +176,6 @@ namespace extraFunctions {
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
     //% block="define function with number arg $slot" blockId=defFunction
-    
     export function defFunction(slot: Slot, handler: (arg: number) => void) {
         let arg: number;
 
@@ -188,7 +185,6 @@ namespace extraFunctions {
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
     //% block="call function with number arg $slot $arg" blockId=callFunction
-    
     export function callFunction(slot: Slot, arg: number) {
 
         func[slot](arg);
@@ -197,7 +193,6 @@ namespace extraFunctions {
 
 
     //% block="plot binary $numb offset $offset reversed $reversed" blockId=plotBin
-    
     export function plotBin(numb: number, offset: number, reversed: boolean): void {
         for (let index = 0; index <= 24; index++) {
             if (numb >= 2 ** (24 - index)) {
@@ -211,7 +206,6 @@ namespace extraFunctions {
         }
     }
     //% block="$a $x $b" blockId=op
-    
     export function op(a: boolean, x: Bool, b: boolean): boolean {
         if (x == 0) {
             return (a && b);
@@ -231,9 +225,7 @@ namespace extraFunctions {
     }
 
     //% block="$a $x $b" blockId=opImg
-    
     export function opImg(imgA: Image, x: Bool, imgB: Image): Image {
-
         let output:Image=null
         output=images.createImage(`
         . . . . .
@@ -275,8 +267,6 @@ namespace extraFunctions {
      * @param leds eg:"00000 01010 00000 10001 01110"
      */
     //% block="plot led string $leds" blockId=plotLedStr
-    
-
     export function plotLedStr(leds: string): void {
         let indexNum = 0;
         for (let char of leds) {
@@ -294,8 +284,6 @@ namespace extraFunctions {
      * @param img
      */
     //% block="image to string $img" blockId=imgToStr
-   
-
     export function imgToStr(img: Image): string {
         let output = '';
         let temp = 0;
@@ -319,8 +307,6 @@ namespace extraFunctions {
      */
     //% block="$mode 7-seg 1-digit number $value offset $offset" blockId=seg7
     //% value.min=0 value.max=9 offset.min=0 offset.max=2
-    
-
     export function seg7(mode: Mode, value: number, offset: number): void {
         let list: number[][] = [[[1, 1, 1], [1, 0, 1], [1, 0, 1], [1, 0, 1], [1, 1, 1]],
         [[0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1]],
@@ -338,7 +324,6 @@ namespace extraFunctions {
                     if (mode) {
                         //unplot
                         led.unplot(x + offset, y);
-
                     } else {
                         //plot
                         led.plot(x + offset, y);
@@ -353,8 +338,6 @@ namespace extraFunctions {
      */
     //% block="$mode 7-seg 2-digit number $value" blockId=seg72
     //% value.min=10 value.max=19
-   
-
     export function seg72(mode: Mode, value: number): void {
         for (let y = 0; y <= 4; y++) {
             if (mode) {
@@ -374,8 +357,6 @@ namespace extraFunctions {
      * @param value eg:3
      */
     //% block="$value" blockId=numb
-    
-
     export function numb(value: number): number {
         return value;
     }
