@@ -4,19 +4,21 @@ namespace extraImg {
     export enum Operator {
         //% block="a and b"
         and = 0,
+        //% block="a + b"
+        add = 0,
         //% block="a or b"
         or = 1,
-        //% block="not(a and b)"
+        //% block="not (a and b)"
         nand = 2,
-        //% block="not(a or b)"
+        //% block="not (a or b)"
         nor = 3,
         //% block="a xor b"
         xor = 4,
-        //% block="not(a xor b)"
+        //% block="not (a xor b)"
         xnor = 5,
-        //% block="not(a)"
+        //% block="not a"
         inv1 = 6,
-        //% block="not(b)"
+        //% block="not b"
         inv2 = 7,
         //% block="a - b"
         min1 = 8,
@@ -29,8 +31,8 @@ namespace extraImg {
     /**
      * Returns null
      */
-    //% block="null" blockId=nothing
-    export function nothing(): null {
+    //% block="null Image" blockId=nothing
+    export function nothing(): Image {
         return null;
     }
 
