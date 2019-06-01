@@ -36,4 +36,28 @@ export function imgToStr(img: Image): string {
         output = output + ' '
     }
     return output;
+}
+
+/**
+     * Boolean operator not for images
+     * @param img eg:null
+     */
+//% block="inverted $img" blockId=notImg
+export function notImg(img: Image): Image {
+    let output: Image = null
+    output = images.createImage(`
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        `);
+    if (img) {
+        for (let imgx = 0; imgx < 5; imgx++) {
+            for (let imgy = 0; imgy < 5; imgy++) {
+                output.setPixel(imgy, imgx, !img.pixel(imgy, imgx));
+            }
+        }
+    }
+    return output;
 }}
