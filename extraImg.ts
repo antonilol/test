@@ -120,9 +120,9 @@ namespace extra_img {
      * @param img eg:null
      */
     //% block="edit image $img x $x y $y to $newvalue" blockId=editImage
-    export function editImage(img: Image, x: number, y: number,newvalue:boolean): Image {
+    export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
         img.setPixel(x,y,newvalue)
-        return img
+        
     }
 
 }
