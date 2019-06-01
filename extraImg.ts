@@ -119,8 +119,9 @@ namespace extra_img {
      * Edit a particular pixel on an image
      * @param img eg:null
      */
-    //% block="edit image $img" blockId=editImage
-    export function editImage(img: Image, x: number, y: number): Image {
+    //% block="edit image $img x $x y $y to $newvalue" blockId=editImage
+    export function editImage(img: Image, x: number, y: number,newvalue:boolean): Image {
+        img.setPixel(x,y,newvalue)
         return img
     }
 
