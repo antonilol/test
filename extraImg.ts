@@ -92,4 +92,28 @@ namespace extraImg {
             img.showImage(0)
         }
     }
+
+    //% block="binary image $numb offset $offset reversed $reversed" blockId=binImage
+    export function binImage(numb: number, offset: number, reversed: boolean): Image {
+        let output: Image = null
+        output = images.createImage(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+        for (let index = 0; index <= 24; index++) {
+            if (numb >= 2 ** (24 - index)) {
+                numb += -1 * 2 ** (24 - index)
+                if (reversed) {
+                    output.setPixel((offset - index) % 5, Math.floor((offset - index) / 5),true)
+                } else {
+                    output.setPixel((offset + 24 - index) % 5, Math.floor((offset + 24 - index) / 5),true)
+                }
+            }
+        }
+        return output
+    }
+
 }
