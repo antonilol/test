@@ -1,5 +1,5 @@
 //% color="#11BB11" block="Extra Functions Images" weight=100 icon="\uf03e"
-namespace extraImg {
+namespace extra_img {
     
     export enum Operator {
         //% block="a and b"
@@ -114,6 +114,14 @@ namespace extraImg {
             }
         }
         return output
+    }
+    /**
+     * Edit a particular pixel on an image
+     * @param img eg:null
+     */
+    //% block="edit image $img" blockId=editImage
+    export function editImage(img: Image, x: number, y: number): Image {
+        return img
     }
 
 }
