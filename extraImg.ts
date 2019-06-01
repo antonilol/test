@@ -4,10 +4,10 @@ namespace extraImg {
     export enum Operator {
         //% block="a and b"
         and = 0,
-        //% block="a or b"
-        or = 1,
         //% block="not (a and b)"
         nand = 2,
+        //% block="a or b"
+        or = 1,
         //% block="not (a or b)"
         nor = 3,
         //% block="a xor b"
