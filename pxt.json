@@ -8,7 +8,8 @@
     "files": [
         "main.ts",
         "extraImg.ts",
-        "typeconv.ts"
+        "typeconv.ts",
+        "_locales/nl/strings.json"
     ],
     "testFiles": [
         "test.ts"
