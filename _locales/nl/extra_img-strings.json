@@ -1,4 +1,4 @@
 {
-    "extra_img.empty":"lege afbeelding",
-    "extra_img.random": "willekeurige afbeelding"
+    "extra_img.empty|block":"lege afbeelding",
+    "extra_img.random|block": "willekeurige afbeelding"
 }
