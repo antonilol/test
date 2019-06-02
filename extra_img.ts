@@ -82,11 +82,12 @@ namespace extra_img {
 
     /**
      * Boolean operators for images
+     * x.fieldOptions.width="200"
      * @param imgA eg:null
      * @param imgB eg:null
      */
     //% x.fieldEditor="gridpicker" x.fieldOptions.columns=2
-    //% x.fieldOptions.tooltips="false" x.fieldOptions.width="200"
+    //% x.fieldOptions.tooltips="false" 
     //% block="(a = $imgA, b = $imgB) $x" blockId=opImg  weight=96
     export function opImg(imgA: Image, imgB: Image, x: Operator): Image {
         let output: Image = null
