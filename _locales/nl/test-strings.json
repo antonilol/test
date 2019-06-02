@@ -10,6 +10,10 @@
     "extra_img.showImg|block":"toon afbeelding $img",
 
 
-    "extra_typeconv|block": "(Extra) Type aanpassen"
-    
+    "extra_typeconv|block": "(Extra) Type aanpassen",
+    "extra_typeconv.numbBool|block": "getal naar boolean $x",
+    "extra_typeconv.boolNumb|block": "boolean naar getal $x",
+    "extra_typeconv.stringBool|block": "tekst naar boolean $x",
+    "extra_typeconv.boolString|block": "boolean naar tekst $x (1)",
+    "extra_typeconv.boolString2|block": "boolean naar tekst $x (2)"
 }
