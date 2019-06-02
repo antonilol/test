@@ -252,11 +252,11 @@ namespace extra {
     }
 
 
- 
+
     
     /**
      * Stackable block to create extremely large blocks.
-     * @param value eg:numb(3)
+     * @param value eg:extra.numb(3)
      */
     //% block="$value" blockId=numb
     export function numb(value: number): number {
