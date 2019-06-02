@@ -36,7 +36,7 @@ namespace extra_img {
     /**
      * TODO
      */
-    //% block="empty image" blockId=empty weight=99
+    //% block="empty" blockId=empty weight=99
     export function empty(): Image {
         return images.createImage(`
         . . . . .
@@ -49,7 +49,7 @@ namespace extra_img {
     /**
      * TODO
      */
-    //% block="filled image" blockId=filled  weight=97
+    //% block="filled" blockId=filled  weight=97
     export function filled(): Image {
         return images.createImage(`
         # # # # #
@@ -62,7 +62,7 @@ namespace extra_img {
     /**
      * TODO
      */
-    //% block="random image" blockId=random  weight=98
+    //% block="random" blockId=random  weight=98
     export function random(): Image {
         let output:Image=null
         output = images.createImage(`
@@ -82,7 +82,6 @@ namespace extra_img {
 
     /**
      * Boolean operators for images
-     * x.fieldOptions.width="200"
      * @param imgA eg:null
      * @param imgB eg:null
      */
@@ -148,7 +147,7 @@ namespace extra_img {
     /**
      * TODO
      */
-    //% block="binary image $numb offset $offset reversed $reversed" blockId=binImage  weight=95
+    //% block="binary (number $numb) (+$offset|px) (reversed $reversed)" blockId=binImage  weight=95
     export function binImage(numb: number, offset: number, reversed: boolean): Image {
         let output: Image = null
         output = images.createImage(`
@@ -172,7 +171,7 @@ namespace extra_img {
     }
     /**
      * Edit a particular pixel on an image
-     * @param img eg:
+     * @param img eg:null
      */
     //% block="edit pixel on image $img x $x y $y to $newvalue" blockId=editImage  weight=94
     export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
@@ -185,7 +184,7 @@ namespace extra_img {
      * Returns an image with a 7-segment 1-digit number.
      * @param offset eg:1
      */
-    //% block="7-seg <10 >=0 image number $value $pos" blockId=seg7
+    //% block="7-seg <10 >=0 $value $pos" blockId=seg7
     //% value.min=0 value.max=9 weight=93
     //% pos.fieldEditor="gridpicker" pos.fieldOptions.columns=1
     //% pos.fieldOptions.tooltips="false" pos.fieldOptions.width="50"
@@ -223,7 +222,7 @@ namespace extra_img {
      * Returns an image with a 7-segment 2-digit number.
      * @param value eg:10
      */
-    //% block="7-seg <20 >=10 image number $value" blockId=seg72  weight=92
+    //% block="7-seg <20 >=10 $value" blockId=seg72  weight=92
     //% value.min=10 value.max=19
     export function seg72(value: number): Image {
         let output: Image = null

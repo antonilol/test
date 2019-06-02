@@ -151,7 +151,7 @@ namespace extra {
     /**
      * TODO
      */
-    //% block="every $ms ms, start directly $startDirectly  " blockId=repeat
+    //% block="every $ms ms, start directly $startDirectly" blockId=repeat
     export function repeat(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum: number = 1;
         let totalWaitingTime: number = 0;
