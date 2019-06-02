@@ -149,7 +149,7 @@ namespace extra {
         s64 = 63
     }
     /**
-     * TODO
+     * TODO [DEFAULT]
      */
     //% block="every $ms ms, start directly $startDirectly" blockId=repeat
     export function repeat(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
@@ -206,7 +206,7 @@ namespace extra {
 
 
     /**
-     * TODO
+     * TODO [DEFAULT]
      */
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
@@ -218,7 +218,7 @@ namespace extra {
 
     }
     /**
-     * TODO
+     * TODO [DEFAULT]
      */
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
@@ -232,7 +232,7 @@ namespace extra {
 
 
     /**
-     * TODO
+     * TODO [DEFAULT]
      */
     //% block="$a $x $b" blockId=op
     export function op(a: boolean, x: Bool, b: boolean): boolean {
