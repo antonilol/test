@@ -165,6 +165,11 @@ namespace extra {
             }
         }
     }
+    /**
+     * On analog pin change
+     * When 'minDiff' is set to 0, this block does the same as basic.forever
+     * @param minDiff eg:1
+     */
     //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=2
     //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="200"
     //% block="on analog pin change $pin minimum difference $minDiff" blockId=onAnalogPinChange
