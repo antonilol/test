@@ -33,7 +33,9 @@ namespace extra_img {
     }
 
 
-    
+    /**
+     * TODO
+     */
     //% block="empty image" blockId=empty weight=99
     export function empty(): Image {
         return images.createImage(`
@@ -44,6 +46,9 @@ namespace extra_img {
         . . . . .
         `);
     }
+    /**
+     * TODO
+     */
     //% block="filled image" blockId=filled  weight=97
     export function filled(): Image {
         return images.createImage(`
@@ -54,6 +59,9 @@ namespace extra_img {
         # # # # #
         `);
     }
+    /**
+     * TODO
+     */
     //% block="random image" blockId=random  weight=98
     export function random(): Image {
         let output:Image=null
@@ -136,6 +144,9 @@ namespace extra_img {
         }
     }
 
+    /**
+     * TODO
+     */
     //% block="binary image $numb offset $offset reversed $reversed" blockId=binImage  weight=95
     export function binImage(numb: number, offset: number, reversed: boolean): Image {
         let output: Image = null

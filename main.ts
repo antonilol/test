@@ -148,7 +148,9 @@ namespace extra {
         //% block="64"
         s64 = 63
     }
-
+    /**
+     * TODO
+     */
     //% block="every $ms ms, start directly $startDirectly  " blockId=repeat
     export function repeat(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum: number = 1;
@@ -203,7 +205,9 @@ namespace extra {
     }
 
 
-
+    /**
+     * TODO
+     */
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
     //% block="define function with number arg (slot=$slot)" blockId=defFunction
@@ -213,6 +217,9 @@ namespace extra {
         func2[slot] = handler;
 
     }
+    /**
+     * TODO
+     */
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
     //% block="call function with number arg $arg (slot=$slot)" blockId=callFunction
@@ -223,7 +230,10 @@ namespace extra {
     }
 
 
-    
+
+    /**
+     * TODO
+     */
     //% block="$a $x $b" blockId=op
     export function op(a: boolean, x: Bool, b: boolean): boolean {
         if (x == 0) {
