@@ -22,10 +22,17 @@ namespace extra_img {
         min1 = 8,
         //% block="b - a"
         min2 = 9,
-        
-        
-
     }
+    export enum Position {
+        //% block="left"
+        left=0,
+        //% block="centre"
+        centre=1,
+        //% block="right"
+        right=2
+    }
+
+
     
     //% block="empty image" blockId=empty weight=99
     export function empty(): Image {
@@ -166,9 +173,9 @@ namespace extra_img {
      * Returns an image with a 7-segment 1-digit number.
      * @param offset eg:1
      */
-    //% block="7-seg 1-digit image number $value offset $offset" blockId=seg7
+    //% block="7-seg 1-digit image number $value $offset" blockId=seg7
     //% value.min=0 value.max=9 offset.min=0 offset.max=2  weight=93
-    export function seg7(value: number, offset: number): Image {
+    export function seg7(value: number, offset: Position): Image {
         let output: Image = null
         output = images.createImage(`
         . . . . .

@@ -8,6 +8,10 @@
     "extra_img.filled|block":"volledig gevulde afbeelding",
     "extra_img.opImg|block":"(a = $imgA, b = $imgB) $x",
     "extra_img.showImg|block":"toon afbeelding $img",
+    "extra_img.binImage|block": "binaire afbeelding $numb +$offset|px omgedraaid $reversed",
+    "extra_img.editImage|block": "edit image $img x $x y $y to $newvalue",
+    "extra_img.seg7|block": "7-seg 1-digit image number $value $offset",
+    "extra_img.seg72|block": "7-seg 2-digit image number $value",
 
 
     "extra_typeconv|block": "(Extra) Type aanpassen",
