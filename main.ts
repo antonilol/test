@@ -1,6 +1,6 @@
-//% color="#11BB11" block="Extra Functions" weight=100 icon="+"
+//% color="#11BB11" block="(Extra) Functions" weight=100 icon="+"
 namespace extra {
-    //% block
+    
     export enum Bool {
         and = 0,
         or = 1,
