@@ -1,9 +1,9 @@
 {
     "extra|block": "(Extra) Functies",
-    "extra.repeat|block": "every $ms ms, start directly $startDirectly",
-    "extra.onAnalogPinChange|block": "on analog pin change $pin minimum difference $minDiff",
-    "extra.defFunction|block": "define function with number arg (slot=$slot)",
-    "extra.callFunction|block": "call function with number arg $arg (slot=$slot)",
+    "extra.repeat|block": "elke $ms milliseconden, start direct $startDirectly",
+    "extra.onAnalogPinChange|block": "Wanneer analoge waarde verandert $pin minimaal verschil $minDiff",
+    "extra.defFunction|block": "maak functie met getal-argument (sleuf=$slot)",
+    "extra.callFunction|block": "voer functie met getal-argument $arg uit (sleuf=$slot)",
     "extra.op|block": "$a $x $b",
     "extra.numb|block": "$value",
     "extra_img|block": "(Extra) Plaatjes",
