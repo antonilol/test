@@ -7,7 +7,7 @@
     },
     "files": [
         "main.ts",
-        "extraImg.ts",
+        "extra_img.ts",
         "typeconv.ts",
         "_locales/nl/extra_img-strings.json"
     ],
