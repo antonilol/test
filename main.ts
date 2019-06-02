@@ -242,21 +242,14 @@ namespace extra {
             return false;
         }
     }
-    //% block="$x" blockId=boolNumb
-    export function boolNumb(x:number):boolean{
-        return x!=0
-    }
-    //% block="$x" blockId=numbBool
-    export function numbBool(x: boolean): number {
-        return x?1:0
-    }
+    
 
 
 
     
     /**
      * Stackable block to create extremely large blocks.
-     * @param value eg:extra.numb(3)
+     * @param value eg:3
      */
     //% block="$value" blockId=numb
     export function numb(value: number): number {
