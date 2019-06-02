@@ -9,7 +9,8 @@
         "main.ts",
         "extra_img.ts",
         "typeconv.ts",
-        "_locales/nl/test-strings.json"
+        "_locales/nl/test-strings.json",
+        "_locales/nl/test-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
