@@ -9,7 +9,7 @@
         "main.ts",
         "extraImg.ts",
         "typeconv.ts",
-        "_locales/nl/extra-strings.json"
+        "_locales/nl/extra_img-strings.json"
     ],
     "testFiles": [
         "test.ts"
