@@ -27,7 +27,7 @@ namespace extra_img {
 
     }
     
-    //% block="empty image" blockId=empty
+    //% block="empty image" blockId=empty  weight=99
     export function empty(): Image {
         return images.createImage(`
         . . . . .
@@ -37,7 +37,7 @@ namespace extra_img {
         . . . . .
         `);
     }
-    //% block="filled image" blockId=filled
+    //% block="filled image" blockId=filled  weight=97
     export function filled(): Image {
         return images.createImage(`
         # # # # #
@@ -47,7 +47,7 @@ namespace extra_img {
         # # # # #
         `);
     }
-    //% block="random image" blockId=random
+    //% block="random image" blockId=random  weight=98
     export function random(): Image {
         let output:Image=null
         output = images.createImage(`
@@ -72,7 +72,7 @@ namespace extra_img {
      */
     //% x.fieldEditor="gridpicker" x.fieldOptions.columns=2
     //% x.fieldOptions.tooltips="false" x.fieldOptions.width="200"
-    //% block="(a = $imgA, b = $imgB) $x" blockId=opImg
+    //% block="(a = $imgA, b = $imgB) $x" blockId=opImg  weight=96
     export function opImg(imgA: Image, imgB: Image, x: Operator): Image {
         let output: Image = null
         output = images.createImage(`
@@ -122,14 +122,14 @@ namespace extra_img {
      * Shows the given image
      * @param img eg:null
      */
-    //% block="show image $img" blockId=showImage
+    //% block="show image $img" blockId=showImage weight=100
     export function showImg(img: Image): void {
         if (img){
             img.showImage(0)
         }
     }
 
-    //% block="binary image $numb offset $offset reversed $reversed" blockId=binImage
+    //% block="binary image $numb offset $offset reversed $reversed" blockId=binImage  weight=95
     export function binImage(numb: number, offset: number, reversed: boolean): Image {
         let output: Image = null
         output = images.createImage(`
@@ -155,7 +155,7 @@ namespace extra_img {
      * Edit a particular pixel on an image
      * @param img eg:
      */
-    //% block="edit image $img x $x y $y to $newvalue" blockId=editImage
+    //% block="edit image $img x $x y $y to $newvalue" blockId=editImage  weight=94
     export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
         if (img){
             img.setPixel(x,y,newvalue)
@@ -167,7 +167,7 @@ namespace extra_img {
      * @param offset eg:1
      */
     //% block="7-seg 1-digit image number $value offset $offset" blockId=seg7
-    //% value.min=0 value.max=9 offset.min=0 offset.max=2
+    //% value.min=0 value.max=9 offset.min=0 offset.max=2  weight=93
     export function seg7(value: number, offset: number): Image {
         let output: Image = null
         output = images.createImage(`
@@ -202,7 +202,7 @@ namespace extra_img {
      * Returns an image with a 7-segment 2-digit number.
      * @param value eg:10
      */
-    //% block="7-seg 2-digit image number $value" blockId=seg72
+    //% block="7-seg 2-digit image number $value" blockId=seg72  weight=92
     //% value.min=10 value.max=19
     export function seg72(value: number): Image {
         let output: Image = null
