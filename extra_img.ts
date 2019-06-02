@@ -27,7 +27,7 @@ namespace extra_img {
 
     }
     
-    //% block="empty image" blockId=empty  weight=99
+    //% block="empty image" blockId=empty color="#F00" weight=99
     export function empty(): Image {
         return images.createImage(`
         . . . . .
