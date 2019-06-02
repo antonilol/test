@@ -162,7 +162,7 @@ namespace extra_img {
      * Edit a particular pixel on an image
      * @param img eg:
      */
-    //% block="edit image $img x $x y $y to $newvalue" blockId=editImage  weight=94
+    //% block="edit pixel on image $img x $x y $y to $newvalue" blockId=editImage  weight=94
     export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
         if (img){
             img.setPixel(x,y,newvalue)
@@ -175,6 +175,8 @@ namespace extra_img {
      */
     //% block="7-seg <10 >=0 image number $value $pos" blockId=seg7
     //% value.min=0 value.max=9 weight=93
+    //% pos.fieldEditor="gridpicker" pos.fieldOptions.columns=1
+    //% pos.fieldOptions.tooltips="false" pos.fieldOptions.width="50"
     export function seg7(value: number, pos: Position): Image {
         let output: Image = null
         output = images.createImage(`

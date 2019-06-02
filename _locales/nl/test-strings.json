@@ -3,13 +3,13 @@
 
     
     "extra_img|block":"(Extra) Plaatjes",
-    "extra_img.empty|block":"lege afbeelding",
-    "extra_img.random|block": "willekeurige afbeelding",
-    "extra_img.filled|block":"volledig gevulde afbeelding",
+    "extra_img.empty|block":"leeg",
+    "extra_img.random|block": "willekeurig",
+    "extra_img.filled|block":"volledig gevuld",
     "extra_img.opImg|block":"(a = $imgA, b = $imgB) $x",
     "extra_img.showImg|block":"toon afbeelding $img",
-    "extra_img.binImage|block": "binaire afbeelding (getal $numb) (+$offset|px) (omgedraaid $reversed)",
-    "extra_img.editImage|block": "edit image $img x $x y $y to $newvalue",
+    "extra_img.binImage|block": "binair (getal $numb) (+$offset|px) (omgedraaid $reversed)",
+    "extra_img.editImage|block": "pas pixel aan op $img x $x y $y naar $newvalue",
     "extra_img.seg7|block": "7 segment getal <10 >=0 $value $pos",
     "extra_img.Position.left|block": "links",
     "extra_img.Position.centre|block": "in het midden",
