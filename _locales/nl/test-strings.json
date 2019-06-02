@@ -19,7 +19,7 @@
     "extra_img.Position.centre|block": "midden",
     "extra_img.Position.right|block": "rechts",
     "extra_img.seg72|block": "7 segment getal <20 >=10 $value",
-    "extra_typeconv|block": "(Extra) Type aanpassen",
+    "extra_typeconv|block": "(Extra) Type conversie",
     "extra_typeconv.numbBool|block": "getal naar boolean $x",
     "extra_typeconv.boolNumb|block": "boolean naar getal $x",
     "extra_typeconv.stringBool|block": "tekst naar boolean $x",
