@@ -159,25 +159,23 @@ namespace extra {
         }
     }
 
-    //% block="on analog pin change P0 (max $maxCheckPerSec check per second, minimum difference $minDiff)" blockId=onAnalogPinChange
-    export function onAnalogPinChange(maxCheckPerSec: number, minDiff: number, handler: (pin_value: number) => void) {
+    //% block="on analog pin change $pin minimum difference $minDiff" blockId=onAnalogPinChange
+    export function onAnalogPinChange(pin:AnalogPin,minDiff: number, handler: (pin_value: number) => void) {
         let analogValue1=0
         let analogValue2=0
         let if1=0
-        let ms=0
-        ms=1/maxCheckPerSec*1000
         while (true) {
-            analogValue1 = pins.analogReadPin(AnalogPin.P0)
+            analogValue1 = pins.analogReadPin(pin)
             if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
                 handler(analogValue1)
             }
-            basic.pause(ms)
-            analogValue2 = pins.analogReadPin(AnalogPin.P0)
+            basic.pause(1)
+            analogValue2 = pins.analogReadPin(pin)
             if1 = 1
             if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
                 handler(analogValue2)
             }
-            basic.pause(ms)
+            basic.pause(1)
         }
     }
 
