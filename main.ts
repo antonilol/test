@@ -142,8 +142,8 @@ namespace extra {
         s64 = 63
     }
 
-    //% block="every $ms ms, start directly $startDirectly  " blockId=onEvent
-    export function onEvent(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
+    //% block="every $ms ms, start directly $startDirectly  " blockId=repeat
+    export function repeat(ms: number, startDirectly: boolean, handler: (indexNum: number, totalWaitingTime: number) => void) {
         let indexNum: number = 1;
         let totalWaitingTime: number = 0;
         if (ms > 0) {
@@ -158,6 +158,29 @@ namespace extra {
             }
         }
     }
+
+    //% block="on analog pin change P0 (max $maxCheckPerSec check per second, minimum difference $minDiff)" blockId=onAnalogPinChange
+    export function onAnalogPinChange(maxCheckPerSec: number, minDiff: number, handler: (pin_value: number) => void) {
+        let analogValue1=0
+        let analogValue2=0
+        let if1=0
+        let ms=0
+        ms=1/maxCheckPerSec*1000
+        while (true) {
+            analogValue1 = pins.analogReadPin(AnalogPin.P0)
+            if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
+                handler(analogValue1)
+            }
+            basic.pause(ms)
+            analogValue2 = pins.analogReadPin(AnalogPin.P0)
+            if1 = 1
+            if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
+                handler(analogValue2)
+            }
+            basic.pause(ms)
+        }
+    }
+
 
 
 
