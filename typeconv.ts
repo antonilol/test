@@ -2,8 +2,7 @@
 namespace extra_typeconv {
     /**
      * returns:
-     * > if x == 0: false
-     * > else:      true
+     * if (x == 0){ false } else { true }
      * @param x eg:1
      */
     //% block="number to boolean $x" blockId=boolNumb
@@ -12,8 +11,7 @@ namespace extra_typeconv {
     }
     /**
      * returns:
-     * > if x == true: 1
-     * > else:         0
+     * if (x == true){ 1 } else { 0 }
      * @param x eg:true
      */
     //% block="boolean to number $x" blockId=numbBool
@@ -22,8 +20,7 @@ namespace extra_typeconv {
     }
     /**
      * returns:
-     * > if x == '': false
-     * > else:       true
+     * if (x == ''){ false } else { true }
      * @param x eg:'text'
      */
     //% block="string to boolean $x" blockId=stringBool
@@ -32,8 +29,7 @@ namespace extra_typeconv {
     }
     /**
      * returns:
-     * > if x == true: 'true'
-     * > else:         ''
+     * if (x == true){ 'true' } else { '' }
      * @param x eg:true
      */
     //% block="boolean to string $x" blockId=boolString
@@ -42,8 +38,7 @@ namespace extra_typeconv {
     }
     /**
      * returns:
-     * > if x == true: 'true'
-     * > else:         'false'
+     * if (x == true){ 'true' } else { 'false' }
      * NOTE: 'false' != false
      * @param x eg:true
      */

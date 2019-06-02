@@ -1,4 +1,4 @@
-//% color="#11BB11" block="Extra Functions Images" weight=100 icon="\uf03e"
+//% color="#11BB11" block="Images (Extra)" weight=100 icon="\uf03e"
 namespace extra_img {
     
     export enum Operator {
