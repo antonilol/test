@@ -188,9 +188,9 @@ namespace extra_img {
     /**
      * Edit a particular pixel on an image
      * @param img eg:null
-     * @param point eg:newPoint(0,0)
+     * @param point eg:extra_img.newPoint(0,0)
      */
-    //% block="edit pixel on image $img point $point to $newvalue" blockId=editImage  weight=94
+    //% block="edit pixel on image $img $point to $newvalue" blockId=editImage  weight=94
     export function editImage(img: Image, point:Point,newvalue:boolean): void {
         if (img){
             img.setPixel(point.x,point.y,newvalue)

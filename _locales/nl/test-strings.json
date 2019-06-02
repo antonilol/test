@@ -14,7 +14,7 @@
     "extra_img.opImg|block": "(a = $imgA, b = $imgB) $x",
     "extra_img.showImg|block": "toon afbeelding $img",
     "extra_img.binImage|block": "binair (getal $numb) (+$offset|px) (omgedraaid $reversed)",
-    "extra_img.editImage|block": "pas pixel aan op $img x $x y $y naar $newvalue",
+    "extra_img.editImage|block": "pas pixel aan op $img $point naar $newvalue",
     "extra_img.seg7|block": "7 segment getal <10 >=0 $value $pos",
     "extra_img.Position.left|block": "links",
     "extra_img.Position.centre|block": "midden",
