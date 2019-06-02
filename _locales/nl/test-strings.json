@@ -1,7 +1,14 @@
 {
+    "extra|block":"(Extra) Functies",
+
+    
+    "extra_img|block":"(Extra) Plaatjes",
     "extra_img.empty|block":"lege afbeelding",
     "extra_img.random|block": "willekeurige afbeelding",
     "extra_img.filled|block":"volledig gevulde afbeelding",
     "extra_img.opImg|block":"(a = $imgA, b = $imgB) $x",
-    "extra_img.showImg|block":"toon afbeelding $img"
+    "extra_img.showImg|block":"toon afbeelding $img",
+
+
+    "extra_typeconv|block": "(Extra) Type aanpassen"
 }
