@@ -9,7 +9,14 @@ namespace extra {
         xor = 4,
         xnor = 5
     }
-    
+    export enum AnalogReadPins {
+        P0=AnalogPin.P0,
+        P1=AnalogPin.P1,
+        P2=AnalogPin.P2,
+        P3=AnalogPin.P3,
+        P4=AnalogPin.P4,
+        P10=AnalogPin.P10
+    }
 
     export enum Slot {
         //% block="1"
@@ -158,12 +165,14 @@ namespace extra {
             }
         }
     }
-
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=2
+    //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="200"
     //% block="on analog pin change $pin minimum difference $minDiff" blockId=onAnalogPinChange
-    export function onAnalogPinChange(pin:AnalogPin,minDiff: number, handler: (pin_value: number) => void) {
+    export function onAnalogPinChange(pin:AnalogReadPins,minDiff: number, handler: (pin_value: number) => void) {
         let analogValue1=0
         let analogValue2=0
         let if1=0
+        
         while (true) {
             analogValue1 = pins.analogReadPin(pin)
             if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
