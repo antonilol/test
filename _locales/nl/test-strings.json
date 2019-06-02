@@ -7,6 +7,7 @@
     "extra.op|block": "$a $x $b",
     "extra.numb|block": "$value",
     "extra_img|block": "(Extra) Plaatjes",
+    "extra_img.newPoint|block": "Punt $x, $y",
     "extra_img.empty|block": "leeg",
     "extra_img.random|block": "willekeurig",
     "extra_img.filled|block": "volledig gevuld",

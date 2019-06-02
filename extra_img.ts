@@ -1,6 +1,12 @@
 //% color="#11BB11" block="(Extra) Images" weight=100 icon="\uf03e"
 namespace extra_img {
-    
+    /**
+     * Point
+     */
+    export class Point {
+        x: number;
+        y: number;
+    }
     export enum Operator {
         //% block="a and b"
         and = 0,
@@ -31,7 +37,17 @@ namespace extra_img {
         //% block="right"
         right=2
     }
-
+    /**
+     * TODO [DEFAULT]
+     */
+    //% block="Point $x, $y" blockId=newPoint weight=91
+    export function newPoint(x:number,y:number): Point {
+        let output:Point=null
+        output= new Point()
+        output.x=x
+        output.y=y
+        return output
+    }
 
     /**
      * TODO
@@ -172,11 +188,12 @@ namespace extra_img {
     /**
      * Edit a particular pixel on an image
      * @param img eg:null
+     * @param point eg:newPoint(0,0)
      */
-    //% block="edit pixel on image $img x $x y $y to $newvalue" blockId=editImage  weight=94
-    export function editImage(img: Image, x: number, y: number,newvalue:boolean): void {
+    //% block="edit pixel on image $img point $point to $newvalue" blockId=editImage  weight=94
+    export function editImage(img: Image, point:Point,newvalue:boolean): void {
         if (img){
-            img.setPixel(x,y,newvalue)
+            img.setPixel(point.x,point.y,newvalue)
         }
     }
 
