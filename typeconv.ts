@@ -32,7 +32,7 @@ namespace extra_typeconv {
      * if (x == true){ 'true' } else { '' }
      * @param x eg:true
      */
-    //% block="boolean to string $x" blockId=boolString
+    //% block="boolean to string $x (1)" blockId=boolString
     export function boolString(x: boolean): string {
         return x ? 'true' : ''
     }
@@ -42,7 +42,7 @@ namespace extra_typeconv {
      * NOTE: 'false' != false
      * @param x eg:true
      */
-    //% block="boolean to string $x" blockId=boolString2
+    //% block="boolean to string $x (2)" blockId=boolString2
     export function boolString2(x: boolean): string {
         return x ? 'true' : 'false'
     }
