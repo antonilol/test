@@ -183,13 +183,13 @@ namespace extra {
         let pin2:number=pin
         while (true) {
             analogValue1 = pins.analogReadPin(pin2)
-            if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
+            if (if1 && Math.abs(analogValue1 - analogValue2) >= minDiff) {
                 handler(analogValue1)
             }
             basic.pause(1)
             analogValue2 = pins.analogReadPin(pin2)
             if1 = 1
-            if (if1 && Math.abs(analogValue1 - analogValue2) > minDiff) {
+            if (if1 && Math.abs(analogValue1 - analogValue2) >= minDiff) {
                 handler(analogValue2)
             }
             basic.pause(1)
