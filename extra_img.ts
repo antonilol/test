@@ -173,9 +173,9 @@ namespace extra_img {
      * Returns an image with a 7-segment 1-digit number.
      * @param offset eg:1
      */
-    //% block="7-seg 1-digit image number $value $offset" blockId=seg7
-    //% value.min=0 value.max=9 offset.min=0 offset.max=2  weight=93
-    export function seg7(value: number, offset: Position): Image {
+    //% block="7-seg <10 >=0 image number $value $pos" blockId=seg7
+    //% value.min=0 value.max=9 weight=93
+    export function seg7(value: number, pos: Position): Image {
         let output: Image = null
         output = images.createImage(`
         . . . . .
@@ -198,7 +198,7 @@ namespace extra_img {
             for (let y = 0; y <= 4; y++) {
                 for (let x = 0; x <= 2; x++) {
                     if (list[y][x]) {
-                        output.setPixel(x + offset, y,true);
+                        output.setPixel(x + pos, y,true);
                     }
                 }
             }
@@ -209,7 +209,7 @@ namespace extra_img {
      * Returns an image with a 7-segment 2-digit number.
      * @param value eg:10
      */
-    //% block="7-seg 2-digit image number $value" blockId=seg72  weight=92
+    //% block="7-seg <20 >=10 image number $value" blockId=seg72  weight=92
     //% value.min=10 value.max=19
     export function seg72(value: number): Image {
         let output: Image = null
