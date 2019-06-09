@@ -11,7 +11,7 @@
     "extra_img.empty|block": "leeg",
     "extra_img.random|block": "willekeurig",
     "extra_img.filled|block": "volledig gevuld",
-    
+    "extra_img.newAnim|block": "nieuwe animatie",
     "extra_img.opImg|block": "(a = $imgA, b = $imgB) $x",
     "extra_img.showImg|block": "toon afbeelding $img",
     "extra_img.binImage|block": "binair (getal $numb) (+$offset|px) (omgedraaid $reversed)",

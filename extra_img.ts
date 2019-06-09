@@ -249,5 +249,13 @@ namespace extra_img {
         }
         return output
     }
+    /**
+     * Creates a new animation
+     */
+    //% block="new animation" blockId=newAnim  weight=101
+    //% blockSetVariable=myAnim
+    export function newAnim(): Image[] {
+        return [];
+    }
     
 }
