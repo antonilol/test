@@ -249,6 +249,26 @@ namespace extra_img {
         }
         return output
     }
+    /**
+     * Creates a new animation. Use the "frame" block to add frames.
+     * @param handler eg:frame(null)
+     */
+    //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
+    //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
+    //% block="new animation (slot=$slot)" blockId=newAnim weight=102
+    export function newAnim(slot:extra.Slot,handler:()=>void):void{
 
 
+
+    }
+    /**
+     * Frame for animation block
+     */
+    
+    //% block="frame $img" blockId=frame weight=101
+    export function frame(img:Image): void {
+        if (img){
+            
+        }
+    }
 }
