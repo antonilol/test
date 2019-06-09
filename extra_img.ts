@@ -2,7 +2,7 @@
 namespace extra_img {
     export class Anim{
         frames:Image[];
-        //% block="show $myAnim"
+        //% block="show $myAnim" parts="Anim"
         show():void{
             
         }
