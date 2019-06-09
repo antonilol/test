@@ -251,7 +251,7 @@ namespace extra_img {
     }
     /**
      * Creates a new animation. Use the "frame" block to add frames.
-     * @param handler eg:frame(null)
+     * @param handler eg:function(){extra_img.frame(null)}
      */
     //% slot.fieldEditor="gridpicker" slot.fieldOptions.columns=8
     //% slot.fieldOptions.tooltips="false" slot.fieldOptions.width="200"
