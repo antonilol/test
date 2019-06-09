@@ -1,6 +1,13 @@
 //% color="#11BB11" block="(Extra) Images" weight=100 icon="\uf03e"
 namespace extra_img {
-    
+    export class Anim{
+        frames:Image[];
+        //% block="show $myAnim"
+        show():void{
+            
+        }
+
+    }
     export enum Operator {
         //% block="a and b"
         and = 0,
@@ -254,8 +261,10 @@ namespace extra_img {
      */
     //% block="new animation" blockId=newAnim  weight=101
     //% blockSetVariable=myAnim
-    export function newAnim(): Image[] {
-        return [];
+    export function newAnim(): Anim {
+        let output=new Anim;
+        output.frames=[]
+        return output;
     }
     
 }
