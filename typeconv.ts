@@ -1,4 +1,4 @@
-//% color="#11BB11" block="(Extra) Type conversion" weight=100 icon=":"
+//% color="#007FFF" block="(Extra) Type conversion" weight=100 icon=":"
 namespace extra_typeconv {
     /**
      * returns:
