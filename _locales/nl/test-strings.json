@@ -6,6 +6,7 @@
     "extra.callFunction|block": "voer functie met getal-argument $arg uit (sleuf=$slot)",
     "extra.op|block": "$a $x $b",
     "extra.numb|block": "$value",
+    "extra.emtyevent|block": "",
     "extra_img|block": "(Extra) Plaatjes",
     "extra_img.newPoint|block": "VERWIJDERD BLOK",
     "extra_img.empty|block": "leeg",
