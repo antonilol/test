@@ -265,4 +265,10 @@ namespace extra {
     export function numb(value: number): number {
         return value;
     }
+    
+    /**
+     * Empty event block
+     */
+    //% block="" blockId=emptyevent
+    export function emptyevent(handler()=>void):void{}
 }
