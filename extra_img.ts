@@ -1,4 +1,4 @@
-//% color="#11BB11" block="(Extra) Images" weight=100 icon="\uf03e"
+//% color="#007FFF" block="(Extra) Images" weight=100 icon="\uf03e"
 namespace extra_img {
     export class Anim{
         frames:Image[];
