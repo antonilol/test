@@ -12,7 +12,7 @@
         "_locales/nl/test-strings.json",
         "_locales/nl/test-jsdoc-strings.json"
     ],
-    "testFiles": [
+    "testFiles": ["test.ts"
     ],
     "public": true,
     
