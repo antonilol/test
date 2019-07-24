@@ -270,5 +270,7 @@ namespace extra {
      * Empty event block
      */
     //% block="" blockId=emptyevent
-    export function emptyevent(handler()=>void):void{}
+    export function emptyevent(handler:()=>void):void {
+    
+    }
 }
